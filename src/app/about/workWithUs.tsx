@@ -23,7 +23,7 @@ const WorkWithUs = () => {
             WORK WITH US
           </h5>
           <h2 className="text-[40px] font-bold leading-[50px] lg:leading-[50px] text-[#FFFFFF]">
-            Now Let's Grow Yours
+            Now Let&apos;s Grow Yours
           </h2>
           <h4 className="text-[14px] font-normal leading-[20px] lg:leading-[20px] text-[#FFFFFF]">
             The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th.

@@ -20,7 +20,7 @@ const Editpick = () => {
       <div className={`w-full h-auto px-6 md:px-[195px] flex flex-col bg-[#FAFAFA] ${montserrat.className}`}>
         <div className="w-full py-10 md:py-28 gap-6 md:gap-12 flex flex-col">
           <div className="flex flex-col justify-center items-center">
-            <h2 className="text-center text-lg md:text-xl font-bold mb-2 text-[#252B42]">EDITOR'S PICK</h2>
+            <h2 className="text-center text-lg md:text-xl font-bold mb-2 text-[#252B42]">EDITOR&apos;S PICK</h2>
             <p className="text-center text-gray-500 mb-8">
               Problems trying to resolve the conflict between
             </p>

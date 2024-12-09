@@ -47,8 +47,8 @@ const FeaturedPosts = () => {
                     <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
                     <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L'Integrál)</h3>
-                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest a la Madison #1 (L&apos;Integrál)</h3>
+                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
                   <span className='flex items-center gap-1'><LiaComments className='text-green-600' /> 10 comments</span>
@@ -74,8 +74,8 @@ const FeaturedPosts = () => {
                     <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
                     <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L'Integrál)</h3>
-                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L&apos;Integrál)</h3>
+                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
                   <span className='flex items-center gap-1'><LiaComments  className='text-green-600' /> 10 comments</span>
@@ -100,8 +100,8 @@ const FeaturedPosts = () => {
                     <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
                     <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L'Integrál)</h3>
-                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L&apos;Integrál)</h3>
+                <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
                   <span className='flex items-center gap-1'><LiaComments  className='text-green-600' /> 10 comments</span>
