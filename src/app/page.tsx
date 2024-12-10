@@ -2,15 +2,12 @@ import React from 'react'
 import Home from './home/page'
 
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <Home/>
-      
-
-
     </div>
   )
 }
 
-export default page
+export default Page

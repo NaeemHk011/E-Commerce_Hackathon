@@ -25,7 +25,7 @@ const montserrat = Montserrat({
     display: 'swap'
     })
 
-const Navbar = () => {
+const ProductNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
     <div>
      <div className='w-[400px] md:w-screen h-[136px] flex flex-col gap-2  '>
         {/* Topline */}
-     <div className={`hidden md:flex justify-between items-center w-screen h-[58px]  bg-[#252B42] ${montserrat.className} `}>
+     <div className={`hidden md:flex justify-between items-center w-screen h-[58px]  bg-[#23856D] ${montserrat.className} `}>
         <div className={`w-[415px] h-[46px] flex gap-[10px]`}>
             <button className='w-[145px] h-[44px] flex items-center p-[10px] gap-[5px] rounded-[5px] text-white'>
                 <LuPhone /> <h6 className='text-sm font-bold leading-6 tracking-[0.200]'>(225) 555-0118</h6></button>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Home</Link>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200] flex items-center ' >Shop <RiArrowDropDownLine className='text-[20px]'/></Link>
                     <Link href="/about"className='text-sm font-bold leading-6 tracking-[0.200]' >About</Link>
-                    <Link href="/productList"className='text-sm font-bold leading-6 tracking-[0.200]' >Blog</Link>
+                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Blog</Link>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Contact</Link>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Pages</Link>
                     </div>
@@ -104,4 +104,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default ProductNav

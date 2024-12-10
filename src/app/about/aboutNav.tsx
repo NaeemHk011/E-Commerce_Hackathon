@@ -37,11 +37,9 @@ const AboutNav = () => {
                 <div className='w-[250px] md:w-[815px] h-[58px] flex justify-between items-center py-[2px] '>
                     <div className=' hidden md:flex w-[361px] h-[25px]  gap-[15px] '>
                     <Link href="/home"className='text-sm font-bold leading-6 tracking-[0.200]' >Home</Link>
-                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200] flex items-center ' >Shop <RiArrowDropDownLine className='text-[20px]'/></Link>
-                    <Link href="/about"className='text-sm font-bold leading-6 tracking-[0.200]' >About</Link>
-                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Blog</Link>
+                    <Link href="/productList"className='text-sm font-bold leading-6 tracking-[0.200]' >Product</Link>
+                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Pricing</Link>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Contact</Link>
-                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Pages</Link>
                     </div>
                     <div className=' w-[150px] md:w-[250px] h-[52px] flex  items-center '>
                         <li className='hidden md:flex w-[106px] h-[54px]  items-center '><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login</button></a></li>
@@ -59,9 +57,9 @@ const AboutNav = () => {
           {/* Menu */}
           {menuOpen && (
             <div className="md:hidden absolute top-16 z-10 left-0 flex w-screen justify-center items-center">
-              <div className={`flex flex-col justify-center items-center w-[123px] h-[270] gap-7 ${montserrat.className} bg-white shadow-lg space-y-4 p-4`}>
+              <div className={`flex flex-col justify-center items-center w-[300px] h-[270] gap-7 ${montserrat.className} bg-white shadow-lg space-y-4 p-4`}>
                 <Link href="/" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Home</Link>
-                <Link href="/" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Product</Link>
+                <Link href="/productList" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Product</Link>
                 <Link href="/" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Pricing</Link>
                 <Link href="/" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Contact</Link>
               </div>
