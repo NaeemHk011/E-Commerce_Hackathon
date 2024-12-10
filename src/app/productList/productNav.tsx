@@ -33,7 +33,7 @@ const ProductNav = () => {
   };
   return (
     <div>
-     <div className='w-[400px] md:w-screen h-[136px] flex flex-col gap-2  '>
+     <div className='w-[400px] md:w-screen h-20 md:h-[136px] flex flex-col gap-2  '>
         {/* Topline */}
      <div className={`hidden md:flex justify-between items-center w-screen h-[58px]  bg-[#23856D] ${montserrat.className} `}>
         <div className={`w-[415px] h-[46px] flex gap-[10px]`}>
