@@ -1,12 +1,11 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Montserrat } from "next/font/google";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
-import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
 import Button from '../components/button';
 
@@ -14,7 +13,7 @@ const montserrat = Montserrat({
   weight: ['400', '700'],
   style: 'normal',
   subsets: ['latin'],
-  display: 'swap'
+  display: 'swap',
 });
 
 const AboutNav = () => {
@@ -27,34 +26,42 @@ const AboutNav = () => {
   return (
     <div className="relative">
       {/* Navigation Wrapper */}
-      <div className="w-screen flex justify-center">
-        <div className={`${montserrat.className} w-screen lg:w-[1322px] h-[91px] flex justify-between items-center px-4 md:px-0`}>
+      <div className="w-full flex justify-center bg-white shadow-md">
+        <div className={`${montserrat.className} container max-w-screen-xl flex justify-between items-center px-4 md:px-6 py-3`}>
           {/* Brand Name */}
-          <div className="w-[187px] h-[58px] py-[13px]">
-            <h3 className="text-2xl font-bold leading-8 tracking-[0.100] ml-5">Bandage</h3>
+          <div className="flex items-center">
+            <h3 className="text-2xl font-bold text-[#252B42]">Bandage</h3>
           </div>
 
           {/* Links and Menu */}
-          <div className="hidden md:flex w-[815px] h-[58px] justify-between items-center">
-            <div className="flex gap-[15px]">
-              <Link href="/home" className="text-sm font-bold leading-6 tracking-[0.200]">Home</Link>
-              <Link href="/product" className="text-sm font-bold leading-6 tracking-[0.200]">Product</Link>
-              <Link href="/pricing" className="text-sm font-bold leading-6 tracking-[0.200]">Pricing</Link>
-              <Link href="/" className="text-sm font-bold leading-6 tracking-[0.200]">Contact</Link>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href="/home" className="text-sm font-bold text-[#737373] hover:text-blue-500">Home</Link>
+            <Link href="/product" className="text-sm font-bold text-[#737373] hover:text-blue-500">Product</Link>
+            <Link href="/pricing" className="text-sm font-bold text-[#737373] hover:text-blue-500">Pricing</Link>
+            <Link href="/contact" className="text-sm font-bold text-[#737373] hover:text-blue-500">Contact</Link>
+          </div>
+
+          {/* Account and Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <MdOutlineAccountCircle className="text-[#23A6F0]" />
+              <button className="text-sm font-bold text-[#23A6F0]">Login</button>
             </div>
-            <div className="flex items-center gap-4">
-              <li className="flex items-center gap-[2px]">
-                <MdOutlineAccountCircle />
-                <button className="rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]">Login</button>
-              </li>
-              <Button title="Become a member" style="w-[174px] bg-[#23A6F0] text-[14px] font-bold text-white h-[52px] px-[15px]" />
-            </div>
+            <Button
+              title="Become a member"
+              style="bg-[#23A6F0] text-white px-4 py-2 rounded-lg"
+            />
           </div>
 
           {/* Mobile Icons */}
-          <div className="flex md:hidden items-center gap-4">
-            <button className="text-base"><CiSearch /></button>
-            <button className="text-base flex items-center"><IoCartOutline />1</button>
+          <div className="flex md:hidden items-center space-x-4">
+            <button className="text-xl">
+              <CiSearch />
+            </button>
+            <button className="text-xl flex items-center">
+              <IoCartOutline />
+              <span className="ml-1 text-sm">1</span>
+            </button>
             <button
               className="text-2xl"
               onClick={toggleMenu}
@@ -68,12 +75,12 @@ const AboutNav = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-[91px] right-0 z-10 w-full bg-white shadow-lg">
-          <div className={`flex flex-col justify-center items-center w-full py-6 ${montserrat.className} space-y-4`}>
-            <Link href="/home" className="text-[#737373] text-[18px] font-normal leading-[27px] tracking-[0.200] hover:text-blue-500">Home</Link>
-            <Link href="/product" className="text-[#737373] text-[18px] font-normal leading-[27px] tracking-[0.200] hover:text-blue-500">Product</Link>
-            <Link href="/pricing" className="text-[#737373] text-[18px] font-normal leading-[27px] tracking-[0.200] hover:text-blue-500">Pricing</Link>
-            <Link href="/" className="text-[#737373] text-[18px] font-normal leading-[27px] tracking-[0.200] hover:text-blue-500">Contact</Link>
+        <div className="absolute top-[100%] left-0 w-full bg-white shadow-lg md:hidden z-10">
+          <div className="flex flex-col items-center py-4 space-y-4">
+            <Link href="/home" className="text-lg font-normal text-[#737373] hover:text-blue-500">Home</Link>
+            <Link href="/product" className="text-lg font-normal text-[#737373] hover:text-blue-500">Product</Link>
+            <Link href="/pricing" className="text-lg font-normal text-[#737373] hover:text-blue-500">Pricing</Link>
+            <Link href="/contact" className="text-lg font-normal text-[#737373] hover:text-blue-500">Contact</Link>
           </div>
         </div>
       )}

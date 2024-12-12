@@ -33,10 +33,10 @@ const Navbar = () => {
   };
   return (
     <div>
-     <div className='w-[400px] md:w-screen h-[136px] flex flex-col gap-2  '>
+     <div className='w-screen h-[136px] flex flex-col  gap-2 '>
         {/* Topline */}
      <div className={`hidden md:flex justify-between items-center w-screen h-[58px]  bg-[#252B42] ${montserrat.className} `}>
-        <div className={`w-[415px] h-[46px] flex gap-[10px]`}>
+        <div className={`w-auto md:w-[415px] h-[46px] flex gap-[10px]`}>
             <button className='w-[145px] h-[44px] flex items-center p-[10px] gap-[5px] rounded-[5px] text-white'>
                 <LuPhone /> <h6 className='text-sm font-bold leading-6 tracking-[0.200]'>(225) 555-0118</h6></button>
                 <button className='w-[260px] h-[44px] flex items-center p-[10px] gap-[5px] rounded-[5px] text-white'>
@@ -57,9 +57,9 @@ const Navbar = () => {
      </div>
 
            {/* navbar */}
-        <div className={`w-screen md:w-screen h-[58px] mx-auto flex justify-between items-center ${montserrat.className} text-[#252B42]`}>
+        <div className={`w-screen h-[58px] mx-auto md:px-10 flex justify-between items-center ${montserrat.className} text-[#252B42]`}>
             <div className='w-[187px] h-[58px] py-[13px] gap-[10px]'>
-                <h3 className={`  text-2xl font-bold leading-8 tracking-[0.100] ml-5 `}>Bandage</h3>
+                <h3 className={`  text-2xl font-bold leading-8 tracking-[0.100] `}>Bandage</h3>
                 </div>
                 <div className='w-[250px] md:w-[1155px] h-[58px] flex justify-between items-center py-[2px] '>
                     <div className=' hidden md:flex w-[361px] h-[25px]  gap-[15px] '>
@@ -67,8 +67,8 @@ const Navbar = () => {
                     <Link href="/productList"className='text-sm font-bold leading-6 tracking-[0.200] flex items-center ' >Shop <RiArrowDropDownLine className='text-[20px]'/></Link>
                     <Link href="/about"className='text-sm font-bold leading-6 tracking-[0.200]' >About</Link>
                     <Link href="/product"className='text-sm font-bold leading-6 tracking-[0.200]' >Blog</Link>
-                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Contact</Link>
-                    <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Pages</Link>
+                    <Link href="/contact"className='text-sm font-bold leading-6 tracking-[0.200]' >Contact</Link>
+                    <Link href="/team"className='text-sm font-bold leading-6 tracking-[0.200]' >Pages</Link>
                     </div>
                     <div className='w-[250px] md:w-[324px] h-[54px] flex justify-center items-center list-none text-[#23A6F0] '>
                         <li className='hidden md:flex w-[166px] h-[54px]  items-center'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
@@ -93,7 +93,7 @@ const Navbar = () => {
                 <Link href="/about" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">About</Link>
                 <Link href="/product" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Product</Link>
                 <Link href="/pricing" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Pricing</Link>
-                <Link href="/" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Contact</Link>
+                <Link href="/contact" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Contact</Link>
               </div>
             </div>)}
             </div>

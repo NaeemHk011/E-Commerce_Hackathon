@@ -57,12 +57,12 @@ const ProductNav = () => {
      </div>
 
            {/* navbar */}
-        <div className={`w-screen md:w-screen h-[58px] mx-auto flex justify-between items-center ${montserrat.className} text-[#252B42]`}>
+        <div className={`w-screen md:w-screen h-[58px] mx-auto flex justify-between items-center px-10 ${montserrat.className} text-[#252B42]`}>
             <div className='w-[187px] h-[58px] py-[13px] gap-[10px]'>
-                <h3 className={`  text-2xl font-bold leading-8 tracking-[0.100] ml-5 `}>Bandage</h3>
+                <h3 className={`  text-2xl font-bold leading-8 tracking-[0.100] ml-5 text-[#252B42]`}>Bandage</h3>
                 </div>
                 <div className='w-[250px] md:w-[1155px] h-[58px] flex justify-between items-center py-[2px] '>
-                    <div className=' hidden md:flex w-[361px] h-[25px]  gap-[15px] '>
+                    <div className=' hidden md:flex w-[361px] h-[25px]  gap-[15px] text-[#252B42]'>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200]' >Home</Link>
                     <Link href="/"className='text-sm font-bold leading-6 tracking-[0.200] flex items-center ' >Shop <RiArrowDropDownLine className='text-[20px]'/></Link>
                     <Link href="/about"className='text-sm font-bold leading-6 tracking-[0.200]' >About</Link>

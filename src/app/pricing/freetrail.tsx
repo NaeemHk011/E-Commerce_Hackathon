@@ -15,7 +15,7 @@ const FreeTrial = () => {
   return (
     <div className={`${montserrat.className} w-screen h-[282px] flex flex-col justify-center items-center mt-20 text-center md:mt-10 bg-white gap-7`}>
       {/* Title */}
-      <h2 className="font-bold text-[40px] leading-[50px] text-[#252B42]">
+      <h2 className="font-bold text-[30px] md:text-[40px] leading-[50px] text-[#252B42]">
         Start your 14 days free trial
       </h2>
       {/* Subtitle */}
