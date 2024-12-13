@@ -38,8 +38,8 @@ const Universe = ()=> {
             We know how large objects will act, but things on a small scale.
           </h4>
         <div className="flex flex-wrap flex-col md:flex-row justify-center lg:justify-start gap-[10px]">
-            <Button title="BUYNOW" style="w-[156px] h-[52px] text-[14px] text-white bg-[#23A6F0] md:bg-[#2DC071] "/>
-            <Button title="READMORE" style="w-[156px] h-[52px] text-[14px] text-blue-500 md:text-[#2DC071] border-2 border-[#23A6F0] md:border-[#2DC071] "/>
+            <Button title="BUYNOW" style="w-[156px] h-[52px] text-[14px] text-white hover:bg-green-600 bg-[#23A6F0] md:bg-[#2DC071] "/>
+            <Button title="READMORE" style="w-[156px] h-[52px] text-[14px] text-blue-500 hover:bg-[#2DC071] hover:text-white  md:text-[#2DC071] border-2 border-[#23A6F0] md:border-[#2DC071] "/>
             
           </div>
         </div>

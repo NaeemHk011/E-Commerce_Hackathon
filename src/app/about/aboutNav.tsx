@@ -26,7 +26,7 @@ const AboutNav = () => {
   return (
     <div className="relative">
       {/* Navigation Wrapper */}
-      <div className="w-full flex justify-center bg-white shadow-md">
+      <div className="w-full flex justify-center  bg-white shadow-md">
         <div className={`${montserrat.className} container max-w-screen-xl flex justify-between items-center px-4 md:px-6 py-3`}>
           {/* Brand Name */}
           <div className="flex items-center">
@@ -49,12 +49,12 @@ const AboutNav = () => {
             </div>
             <Button
               title="Become a member"
-              style="bg-[#23A6F0] text-white px-4 py-2 rounded-lg"
+              style="bg-[#23A6F0] text-white px-4 py-2 rounded-lg hover:bg-blue-800"
             />
           </div>
 
           {/* Mobile Icons */}
-          <div className="flex md:hidden items-center space-x-4">
+          <div className="flex md:hidden items-center  space-x-4">
             <button className="text-xl">
               <CiSearch />
             </button>

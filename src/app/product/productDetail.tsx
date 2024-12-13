@@ -36,10 +36,10 @@ const ProductCard = () => {
             className="w-[506px] h-[450px] object-cover rounded-md"
           />
           {/* Navigation Arrows */}
-          <button className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-4xl  ">
+          <button className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-gray-400  ">
           <IoIosArrowBack />
           </button>
-          <button className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-4xl ">
+          <button className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-gray-400 ">
           <IoIosArrowForward />
           </button>
         </div>

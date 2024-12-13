@@ -26,7 +26,7 @@ const VitaClassic= () => {
                             <p className="w-[300px] h-[40px] font-medium text-[14px] leading-[20px] md:text-left text-center ">We know how large objects will act, We know how are objects will act, We know</p>
                             <div className=" w-[200px] md:w-[295px] h-[52px] flex flex-col md:flex-row items-center md:text-left text-center gap-[34px]">
                                 <h3 className="w-[77px] h-[32px] font-bold text-[24px] leading-[32px] md:text-left text-center ">$16.48</h3>
-                                <Button title="ADD TO CART" style="text-[14px] bg-[#2DC071] font-bold leading-[22px] tracking-[0.200]"/>
+                                <Button title="ADD TO CART" style="text-[14px] bg-[#2DC071] font-bold leading-[22px] hover:bg-green-600 tracking-[0.200]"/>
                             </div>
                         </div>
                         <div className=" w-[350px] md:w-[510px] ">

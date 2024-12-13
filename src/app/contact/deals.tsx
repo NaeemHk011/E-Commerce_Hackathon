@@ -29,11 +29,11 @@ const ContactDeals = () => {
       <div className={` ${montserrat.className} flex flex-col md:flex-row justify-center items-center gap-6 py-10 w-full`}>
         {/* Contact Card */}
         <div className={` ${montserrat.className} bg-white rounded-lg p-6 w-[90%] max-w-sm flex flex-col gap-4 items-center text-center shadow-md`}>
-          <LuPhone className="text-6xl text-[#23A6F0]" />
+          <LuPhone className="text-6xl text-[#23A6F0] " />
           <h5 className="text-sm font-bold text-[#252B42]">georgia.young@example.com</h5>
           <h5 className="text-sm font-bold text-[#252B42]">georgia.young@ple.com</h5>
           <h5 className="text-base font-bold text-[#252B42]">Get Support</h5>
-          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full border-2 border-[#23A6F0]" />
+          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full hover:bg-[#23A6F0] hover:text-white border-2 border-[#23A6F0]" />
         </div>
 
         {/* Location Card */}
@@ -42,7 +42,7 @@ const ContactDeals = () => {
           <h5 className="text-sm font-bold">georgia.young@example.com</h5>
           <h5 className="text-sm font-bold">georgia.young@ple.com</h5>
           <h5 className="text-base font-bold">Get Support</h5>
-          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full border-2 border-[#23A6F0]" />
+          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full hover:bg-[#23A6F0] hover:text-white border-2 border-[#23A6F0]" />
         </div>
 
         {/* Email Card */}
@@ -51,7 +51,7 @@ const ContactDeals = () => {
           <h5 className="text-sm font-bold text-[#252B42]">georgia.young@example.com</h5>
           <h5 className="text-sm font-bold text-[#252B42]">georgia.young@ple.com</h5>
           <h5 className="text-base font-bold text-[#252B42]">Get Support</h5>
-          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full border-2 border-[#23A6F0]" />
+          <Button title="Submit Request" style="text-[#23A6F0] px-8 py-3 rounded-full hover:bg-[#23A6F0] hover:text-white border-2 border-[#23A6F0]" />
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const ContactDeals = () => {
           <PiArrowBendRightDownBold className="text-5xl md:text-6xl -rotate-12 text-[#23A6F0]" />
           <h5 className="text-sm font-bold text-[#252B42]">WE CAN&apos;T WAIT TO MEET YOU</h5>
           <h2 className="text-3xl md:text-5xl font-bold leading-tight text-[#252B42]">Let&apos;s Talk</h2>
-          <Button title="Try it free now" style="text-sm font-bold text-white bg-[#23A6F0] px-10 py-3 rounded-full" />
+          <Button title="Try it free now" style="text-sm font-bold hover:bg-white hover:text-[#23A6F0] text-white bg-[#23A6F0] px-10 py-3 rounded-full" />
         </div>
       </div>
     </div>

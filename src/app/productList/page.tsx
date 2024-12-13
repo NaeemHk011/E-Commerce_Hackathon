@@ -1,15 +1,14 @@
 import React from 'react'
-import ProductNav from './productNav'
 import Shop from './shop'
 import Companies from '../about/companies'
 import Footer from '../components/footer'
-import BestSeller from '../home/bestSeller'
 import List from './list'
+import Navbar from '../components/Navbar'
 
 const ProductList = () => {
   return (
     <div>
-        <ProductNav/>
+        <Navbar style='bg-[#23856D]'/>
         <Shop/>
         <div className=' hidden md:block'>
         <Companies/>

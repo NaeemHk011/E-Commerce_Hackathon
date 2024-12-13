@@ -25,7 +25,7 @@ const products = [
 
 const BestProduct = () => {
   return (
-    <div className="w-screen mt-10 flex justify-center bg-[#FAFAFA]">
+    <div className="w-screen mt-10 flex justify-center  bg-[#FAFAFA]">
       <div className="w-[328px] md:w-[1124px] py-[80px] flex flex-col items-center gap-[120px]">
        
         {/* Card Section */}
@@ -33,7 +33,7 @@ const BestProduct = () => {
           {products.map((product, index) => (
             <div key={index} className="w-[238px] h-[470px] bg-white mx-auto">
               <div className="w-[239px] h-[300px]">
-                <Image src={product.src} alt={product.alt} width={239} height={300} />
+                <Image src={product.src} alt={product.alt} width={239} height={300} className="hover:scale-95 duration-500" />
               </div>
               <CardText />
             </div>

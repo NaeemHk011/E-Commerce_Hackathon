@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 const Inovation = () => {
   return (
     <div className="w-screen h-auto flex flex-col justify-center mt-10 items-center px-4">
-      <div className={`${montserrat.className} w-full max-w-[827px] flex flex-col items-center gap-4`}>
+      <div className={`${montserrat.className} w-full  max-w-[827px] flex flex-col items-center gap-4`}>
         <h5 className="text-base font-bold leading-6 tracking-[0.100px] text-center text-[#737373]">WHAT WE DO</h5>
         <h5 className="text-[28px] md:text-[52px] font-bold leading-snug text-center text-[#252B42]">
           Innovation tailored for you
@@ -31,26 +31,26 @@ const Inovation = () => {
         </h6>
       </div>
 
-      <div className="w-full h-auto mt-6">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-[30px] text-[#252B42]">
+      <div className="w-full h-auto mt-6 border-3 border-red">
+        <div className="flex flex-col md:flex-row  justify-center items-center gap-6 md:gap-[30px] text-[#252B42]">
           {/* Main Image */}
           <div className="w-full max-w-[500px] h-[300px] sm:h-[400px] md:h-[510px]">
-            <Image src={image1} alt="image" className="w-full h-full object-cover" />
+            <Image src={image1} alt="image" className="w-full h-full object-cover hover:scale-105 duration-500" />
           </div>
 
           {/* Small Images */}
           <div className="w-full grid grid-cols-2 gap-4 md:gap-6 md:max-w-[480px]">
             <div className="h-[150px] sm:h-[200px] md:h-[242px]">
-              <Image src={image2} alt="image" className="w-full h-full object-cover" />
+              <Image src={image2} alt="image" className="w-full h-full object-cover hover:scale-105 duration-500" />
             </div>
             <div className="h-[150px] sm:h-[200px] md:h-[242px]">
-              <Image src={image3} alt="image" className="w-full h-full object-cover" />
+              <Image src={image3} alt="image" className="w-full h-full object-cover hover:scale-105 duration-500" />
             </div>
             <div className="h-[150px] sm:h-[200px] md:h-[242px]">
-              <Image src={image4} alt="image" className="w-full h-full object-cover" />
+              <Image src={image4} alt="image" className="w-full h-full object-cover hover:scale-105 duration-500" />
             </div>
             <div className="h-[150px] sm:h-[200px] md:h-[242px]">
-              <Image src={image5} alt="image" className="w-full h-full object-cover" />
+              <Image src={image5} alt="image" className="w-full h-full object-cover hover:scale-105 duration-500" />
             </div>
           </div>
         </div>

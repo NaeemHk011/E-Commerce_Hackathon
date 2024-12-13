@@ -35,7 +35,7 @@ const BestSeller = () => {
           {products.map((product, index) => (
             <div key={index} className="w-[238px] h-[615px] mx-auto">
               <div className="w-[239px] h-[427px]">
-                <Image src={product.src} alt={product.alt} width={239} height={427} />
+                <Image src={product.src} alt={product.alt} width={239} height={427} className="hover:scale-95 duration-500 hover:opacity-80"/>
               </div>
               <CardText />
             </div>

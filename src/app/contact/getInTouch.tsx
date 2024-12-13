@@ -15,9 +15,9 @@ const montserrat = Montserrat({
 
 const GetInTouch = () => {
     return (
-        <div className='w-full h-auto relative flex flex-col md:flex-row justify-between items-center bg-gray-50'>
+        <div className='w-full h-full px-20 flex flex-col md:flex-row  justify-between mt-10 items-center '>
             {/* Left Side */}
-            <div className={`w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-6 md:px-10 gap-4 md:gap-6 ${montserrat.className}`}>
+            <div className={`w-screen md:w-[500px] flex flex-col justify-center text-center md:text-left items-center md:items-start px-6 md:px-10 gap-4 md:gap-6 ${montserrat.className}`}>
                 <h5 className='text-xs sm:text-sm md:text-base font-bold tracking-wide text-[#252B42]'>Contact</h5>
                 <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide text-[#252B42]'>
                     Get in touch today!
@@ -38,16 +38,16 @@ const GetInTouch = () => {
                     <AiFillInstagram />
                     <FaLinkedin />
                 </div>
-            </div>
+             </div>
 
             {/* Right Side */}
-            <div className='w-full md:w-1/2 flex items-center justify-center relative mt-6 md:mt-0'>
+           
                 <Image
                     src={image}
                     alt='Background Image'
-                    className='w-full h-full object-cover rounded-md md:rounded-none'
+                    className=' w-screen h-full md:w-[600px] md:h-[600px] object-cover   rounded-md md:rounded-none'
                 />
-            </div>
+            
         </div>
     );
 };

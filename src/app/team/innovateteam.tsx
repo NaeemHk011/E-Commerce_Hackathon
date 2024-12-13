@@ -24,28 +24,28 @@ const members = [
 
 const InnovateTeam = () => {
     return (
-        <div className="w-full bg-white flex justify-center mt-10 items-center py-12">
-            <div className="container mx-auto px-4">
+        <div className="w-screen bg-white flex justify-center  mt-10 items-center py-12">
+            <div className=" mx-auto px-4">
                 {/* Heading */}
                 <div className={`text-center mb-12 ${montserrat.className}`}>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Meet Our Team</h2>
                 </div>
 
                 {/* Card Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-8">
                     {members.map((member, index) => (
                         <div
                             key={index}
-                            className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center"
+                            className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center hover:scale-95 duration-500"
                         >
                             <Image
                                 src={member.src}
                                 alt={member.alt}
                                 width={316}
                                 height={231}
-                                className="w-full h-auto"
+                                className="w-full h-auto "
                             />
-                            <div className="p-6 text-center">
+                            <div className={`${montserrat.className} p-6 text-center`}>
                                 <h5 className="text-lg font-bold text-gray-800">Username</h5>
                                 <h6 className="text-sm font-semibold text-gray-500">Profession</h6>
                                 <div className="flex justify-center items-center gap-4 mt-4 text-blue-500">

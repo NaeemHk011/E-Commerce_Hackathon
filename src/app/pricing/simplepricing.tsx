@@ -32,14 +32,14 @@ const Simplepricing = () => {
         <div className='w-screen h-full flex justify-center items-center bg-[#FAFAFA] px-4'>
           <div className='w-full max-w-[1050px] h-full flex flex-col justify-center items-center '>
 
-            <div className={` ${montserrat.className} w-[90%] max-w-[415px] h-[100px] gap-[10px] flex flex-col justify-center items-center`}>
+            <div className={` ${montserrat.className} w-[90%] max-w-[415px] h-[100px] gap-[10px] flex flex-col justify-center items-center `}>
               <h5 className='text-[28px] md:text-[40px] font-bold leading-20 tracking-[0.100px] text-center text-[#252B42]'>Pricing</h5>
               <p className='text-[14px] font-normal leading-[20px] tracking-[0.100px] text-center text-[#737373]'>Problems trying to resolve the conflict between 
                 the two major realms of Classical physics: Newtonian mechanics
               </p>
             </div>
 
-            <div className={` ${montserrat.className} w-[90%] max-w-[311px] h-[44px] gap-[16px] flex justify-center items-center`}>
+            <div className={` ${montserrat.className} w-[90%] max-w-[311px] h-[44px] gap-[16px] flex justify-center items-center `}>
               <div className='w-[186px] h-[28px] flex items-center gap-1 '>
                 <h5 className='text-[16px] font-bold leading-[24px] tracking-[0.100px] text-center text-[#252B42]'>Monthly</h5>
                 <RxSwitch className='text-[24px] text-[#23A6F0]' />
@@ -49,7 +49,7 @@ const Simplepricing = () => {
 
             <div className={` ${montserrat.className} flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6 py-10`}>
               {/* Free Plan */}
-              <div className="bg-white rounded-lg p-6 w-[90%] max-w-[300px] text-center">
+              <div className="bg-white rounded-lg p-6 w-[90%] max-w-[300px] text-center hover:scale-105 duration-500 ">
                 <h3 className="text-2xl font-bold text-[#252B42]">FREE</h3>
                 <h5 className="text-base font-bold leading-6 text-[#737373] mt-2">Organize across all apps by hand</h5>
                 <h2 className="text-[40px] leading-[50px] font-bold text-[#23A6F0] mt-4">0 <span className='text-2xl'>$</span> </h2>
@@ -60,7 +60,7 @@ const Simplepricing = () => {
               </div>
 
               {/* Standard Plan */}
-              <div className="bg-[#252B42] text-white rounded-lg p-6 w-[90%] max-w-[300px] text-center">
+              <div className="bg-[#252B42] text-white rounded-lg p-6 w-[90%] max-w-[300px] text-center hover:scale-105 duration-500 ">
                 <h3 className="text-2xl font-bold">STANDARD</h3>
                 <h5 className="text-base font-bold leading-6 mt-2">Organize across all apps by hand</h5>
                 <h2 className="text-[40px] leading-[50px] font-bold text-[#23A6F0] mt-4">99.9 <span className='text-2xl'>$</span> </h2>
@@ -72,7 +72,7 @@ const Simplepricing = () => {
               </div>
 
               {/* Premium Plan */}
-              <div className="bg-white rounded-lg p-6 w-[90%] max-w-[300px] text-center">
+              <div className="bg-white rounded-lg p-6 w-[90%] max-w-[300px] text-center hover:scale-105 duration-500">
                 <h3 className="text-2xl font-bold text-[#252B42]">PREMIUM</h3>
                 <h5 className="text-base font-bold leading-6 text-[#737373] mt-2">Organize across all apps by hand</h5>
                 <h2 className="text-[40px] leading-[50px] font-bold text-[#23A6F0] mt-4">199.9 <span className='text-2xl'>$</span> </h2>

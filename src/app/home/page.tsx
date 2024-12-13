@@ -13,7 +13,7 @@ import Footer from '../components/footer'
 const Home = () => {
   return (
     <div >
-         <Navbar/>
+         <Navbar style='bg-[#252B42]'/>
          <Hero/>
          <Editpick/>
          <BestSeller/>

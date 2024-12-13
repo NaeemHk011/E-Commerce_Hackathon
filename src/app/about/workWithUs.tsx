@@ -13,8 +13,8 @@ const montserrat = Montserrat({
 
 const WorkWithUs = () => {
   return (
-    <div className="w-screen h-[636px] bg-[#2A7CC7] flex justify-center items-center relative">
-      <div className="w-[90%] md:w-screen flex justify-between items-center lg:flex-row gap-[30px] px-4 lg:px-0">
+    <div className="w-screen  h-[636px] bg-[#2A7CC7] flex justify-center items-center relative">
+      <div className="w-[70%]  md:w-screen flex justify-between items-center lg:flex-row gap-[30px] px-4 lg:px-0">
 
         {/* Text Section */}
         <div

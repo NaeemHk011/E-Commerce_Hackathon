@@ -13,8 +13,8 @@ const montserrat = Montserrat({
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-10">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-white py-10 ">
+      <div className="max-w-7xl mx-auto ">
         {/* Top Section */}
         <div className='flex flex-col md:flex-row justify-center gap-6 md:gap-0 md:justify-between items-center bg-gray-100 px-6 md:px-14 lg:px-28 py-6'>
           <div>
@@ -23,13 +23,13 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex gap-4">
-            <a href="#" className="text-blue-600 text-xl" aria-label="Facebook">
+            <a href="#" className="text-blue-600 text-xl hover:scale-125" aria-label="Facebook">
               <FaFacebook />
             </a>
-            <a href="#" className="text-blue-600 text-xl" aria-label="Instagram">
+            <a href="#" className="text-blue-600 text-xl hover:scale-125" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="#" className="text-blue-600 text-xl" aria-label="Twitter">
+            <a href="#" className="text-blue-600 text-xl hover:scale-125" aria-label="Twitter">
               <FaTwitter />
             </a>
           </div>
@@ -87,13 +87,13 @@ const Footer = () => {
           {/* Get in Touch */}
           <div className={`${montserrat.className} w-full md:w-auto`}>
             <h4 className="text-lg font-bold text-[#252B42] mb-4">Get in Touch</h4>
-            <form className="flex flex-col md:flex-row gap-5">
+            <form className="flex flex-col md:flex-row gap-5 ">
               <input
                 type="email"
                 placeholder="Your Email"
                 className="p-3 border border-gray-300 rounded-sm font-bold w-full md:w-auto"
               />
-              <Button title="Subscribe" style="bg-blue-600 text-white font-bold px-6 py-3" />
+              <Button title="Subscribe" style="bg-blue-600 text-white font-bold hover:bg-blue-700 px-6 py-3" />
             </form>
             <p className="text-sm text-[#737373] mt-3 font-bold">
               Lore imp sum dolor Amit

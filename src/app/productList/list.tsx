@@ -29,21 +29,21 @@ const products = [
 
 const List = () => {
   return (
-    <div className="w-screen mt-10 flex justify-center">
-      <div className="w-[328px] md:w-[1124px] py-[80px] flex flex-col items-center gap-[80px]">
+    <div >
+      <div className=" w-full mt-10  justify-center   py-[80px] flex flex-col  items-center gap-[80px]">
        
         {/* Card Section */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
           {products.map((product, index) => (
             <div key={index} className="w-[238px] h-[515px] mx-auto">
               <div className="w-[239px] h-[300px]">
-                <Image src={product.src} alt={product.alt} width={239} height={300} />
+                <Image src={product.src} alt={product.alt} width={239} height={300} className="hover:scale-95 duration-500 hover:opacity-80" />
               </div>
               <CardText />
             </div>
           ))}
         </div>
-        <div className={`${montserrat.className} w-[313px] h-[75px] flex  items-center rounded-[7px] border-[1.35px]`}>
+        <div className={`${montserrat.className} w-[300px]    h-[75px] flex  items-center rounded-[7px] border-[1.35px]`}>
             <div className="flex justify-center items-center w-[84px] h-[74px]  ">
                 <h2 className="text-sm font-bold leading-6 p-[25px] text-[#BDBDBD]  bg-[#F3F3F3] ">First</h2>
             </div>

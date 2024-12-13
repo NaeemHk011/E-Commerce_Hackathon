@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 
 const FreeTrial = () => {
   return (
-    <div className={`${montserrat.className} w-screen h-[282px] flex flex-col justify-center items-center mt-20 text-center md:mt-10 bg-white gap-7`}>
+    <div className={`${montserrat.className}  w-full h-[282px] flex flex-col justify-center items-center mt-20 text-center md:mt-10 bg-white gap-7`}>
       {/* Title */}
       <h2 className="font-bold text-[30px] md:text-[40px] leading-[50px] text-[#252B42]">
         Start your 14 days free trial
@@ -23,7 +23,7 @@ const FreeTrial = () => {
         Met minim Mollie non desert Alamo est sit cliquey dolor <br /> do met sont. RELIT official consequent.
       </p>
       {/* Button */}
-      <Button title='Try it free now' style=" bg-[#23A6F0] text-white font-bold hover:bg-[#1b8dd0] transition"/>
+      <Button title='Try it free now' style=" bg-[#23A6F0] text-white font-bold hover:bg-blue-600 transition"/>
       
       
       {/* Social Icons */}

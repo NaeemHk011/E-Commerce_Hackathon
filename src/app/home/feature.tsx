@@ -31,9 +31,9 @@ const FeaturedPosts = () => {
         </div>
   
         {/* Cards Grid */}
-        <div className="flex flex-col md:flex-row gap-5 w-screen md:w-[1045px] justify-center items-center h-full md:h-[606px]  ">
+        <div className="flex flex-col md:flex-row gap-5 w-screen md:w-[1045px] justify-center items-center h-full  md:h-[606px]  ">
           {/* Card 1 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px] mx-auto bg-white shadow-md rounded-lg overflow-hidden`}>
+            <div className={`${montserrat.className} w-[338px] h-[606px] mx-auto bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               <div className="relative">
                 <Image src={image1} alt='Loudest' className="w-full h-[300px] object-cover" />
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded">
@@ -44,10 +44,10 @@ const FeaturedPosts = () => {
               <div className="w-[338px] h-[306px] py-[25px] px-[25px] flex flex-col gap-[10px] ">
                 <div className='w-[159px] h-4 flex gap-[15px] '>
                     <p className='font-normal text-xs leading-4 text-[#8EC2F2]'>Google</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>Trending</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest a la Madison #1 (L&apos;Integrál)</h3>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7  hover:text-[#8EC2F2]">Loudest a la Madison #1 (L&apos;Integrál)</h3>
                 <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
@@ -59,10 +59,10 @@ const FeaturedPosts = () => {
               </div>
             </div>
            {/* Card 2 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md rounded-lg overflow-hidden`}>
+            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               {/* Post Image */}
               <div className="relative">
-                <Image src={image2} alt='Loudest' className="w-full h-[300px] object-cover" />
+                <Image src={image2} alt='Loudest' className="w-full h-[300px] object-cover " />
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded">
                   NEW
                 </span>
@@ -71,10 +71,10 @@ const FeaturedPosts = () => {
               <div className="w-[338px] h-[306px] py-[25px] px-[25px] flex flex-col gap-[10px] ">
                 <div className='w-[159px] h-4 flex gap-[15px] '>
                     <p className='font-normal text-xs leading-4 text-[#8EC2F2]'>Google</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>Trending</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L&apos;Integrál)</h3>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 hover:text-[#8EC2F2] ">Loudest à la Madison #1 (L&apos;Integrál)</h3>
                 <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
@@ -86,7 +86,7 @@ const FeaturedPosts = () => {
               </div>
             </div>
               {/* Card 3 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md rounded-lg overflow-hidden`}>
+            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               
               <div className="relative">
                 <Image src={image3} alt='Loudest' className="w-full h-[300px] object-cover" />
@@ -97,10 +97,10 @@ const FeaturedPosts = () => {
               <div className="w-[338px] h-[306px] py-[25px] px-[25px] flex flex-col gap-[10px] ">
                 <div className='w-[159px] h-4 flex gap-[15px] '>
                     <p className='font-normal text-xs leading-4 text-[#8EC2F2]'>Google</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>Trending</p>
-                    <p className='font-normal text-xs leading-4 text-[#737373]'>New</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>Trending</p>
+                    <p className='font-normal text-xs leading-4 text-[#737373] hover:text-[#8EC2F2]'>New</p>
                 </div>
-                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7 ">Loudest à la Madison #1 (L&apos;Integrál)</h3>
+                <h3 className="w-[247px] h-[60px] text-xl font-normal text-[#252B42] leading-7  hover:text-[#8EC2F2]">Loudest à la Madison #1 (L&apos;Integrál)</h3>
                 <p className="w-[247px] h-[60px] font-normal text-sm leading-5 text-[#737373]">We focus on ergonomics and meeting you where you work. It&apos;s only a keystroke away.</p>
                 <div className="w-[298px] h-[46px] flex justify-between items-center py-[15px] text-[#737373] text-xs leading-4 ">
                   <span className='flex items-center gap-1'><FaRegClock className='text-[#8EC2F2]'/> 22 April 2021</span>
