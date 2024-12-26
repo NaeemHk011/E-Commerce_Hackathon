@@ -26,7 +26,7 @@ const Hero = () => {
               <h1 className='text-[40px] md:text-[58px] font-bold leading-20 tracking-[0.02em]'>ABOUT US</h1>
               <h4 className='text-[16px] md:text-xl font-normal leading-[30px] tracking-[0.02em] text-[#737373]'>We know how large objects will act,<br /> 
               but things on a small scale</h4>
-              <Button title='Get Quote Now' style='font-normal text-white font-bold leading-[22px] bg-[#23A6F0]'/>
+              <Button title='Get Quote Now' style='font-normal text-white font-bold leading-[22px] bg-[#23A6F0] hover:bg-blue-500 '/>
           </div>
           </div>
 

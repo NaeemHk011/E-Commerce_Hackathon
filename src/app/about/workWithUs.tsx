@@ -30,7 +30,7 @@ const WorkWithUs = () => {
           </h4>
           <Button
             title="Button"
-            style="w-[132px] h-[52px] text-[14px] text-bold text-[#FAFAFA] border-2 border-[#FAFAFA]"/>
+            style="w-[132px] h-[52px] text-[14px] text-bold text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#2A7CC7] border-2 border-[#FAFAFA]"/>
         </div>
 
         {/* Image Section */}

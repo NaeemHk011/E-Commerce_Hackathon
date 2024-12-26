@@ -45,11 +45,11 @@ const AboutNav = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <MdOutlineAccountCircle className="text-[#23A6F0]" />
-              <button className="text-sm font-bold text-[#23A6F0]">Login</button>
+              <button className="text-sm font-bold text-[#23A6F0] hover:text-[#252B42]">Login</button>
             </div>
             <Button
               title="Become a member"
-              style="bg-[#23A6F0] text-white px-4 py-2 rounded-lg hover:bg-blue-800"
+              style="bg-[#23A6F0] text-white px-4 py-2 rounded-lg hover:bg-blue-500"
             />
           </div>
 

@@ -30,7 +30,7 @@ const OurTeam = () => {
                 </div>
                       {/* card div */}
                 <div className='w-full md:w-[1034px] h-[1270px] md:h-[383px] flex flex-col md:flex-row justify-center items-center   gap-[30px]'>
-                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col  bg-white`}>
+                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col hover:scale-95 duration-500 bg-white`}>
                         <Image src={image1} alt='image' className='w-[316px] h-[231px]'/>
                         <div className='w-[316px] h-[152px] flex justify-center items-center flex-col gap-[10px] p-8'>
                             <h5 className='font-bold text-[16px] leading-[24px] text-[#252B42]'>Username</h5>
@@ -42,7 +42,7 @@ const OurTeam = () => {
                              </div>
                         </div>
                     </div>
-                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col  bg-white`}>
+                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col hover:scale-95 duration-500 bg-white`}>
                         <Image src={image2} alt='image' className='w-[316px] h-[231px]'/>
                         <div className='w-[316px] h-[152px] flex justify-center items-center flex-col gap-[10px] p-8'>
                             <h5 className='font-bold text-[16px] leading-[24px] text-[#252B42]'>Username</h5>
@@ -54,7 +54,7 @@ const OurTeam = () => {
                              </div>
                         </div>
                     </div>
-                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col  bg-white`}>
+                    <div className={` ${montserrat.className} w-[316] h-[383px] flex flex-col hover:scale-95 duration-500 bg-white`}>
                         <Image src={image3} alt='image' className='w-[316px] h-[231px]'/>
                         <div className='w-[316px] h-[152px] flex justify-center items-center flex-col gap-[10px] p-8'>
                             <h5 className='font-bold text-[16px] leading-[24px] text-[#252B42]'>Username</h5>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import coloursIcon from "../../../public/Home/product-colors.png"
-
+import Link from "next/link";
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
@@ -12,8 +12,9 @@ const montserrat = Montserrat({
 
 export default function CardText() {
   return (
-    <div className={`${montserrat.className} w-[239px] h-[188px] py-[25px] px-[25px] flex flex-col items-center justify-center gap-[10px]`}>
-      <h5 className="w-full  font-bold text-[16px] leading-[24px] text-center text-[#252B42]">
+    <>
+    <Link href="/product"> <div className={`${montserrat.className} w-[239px] h-[188px] py-[25px] px-[25px] flex flex-col items-center justify-center gap-[10px]`}>
+     <h5 className="w-full  font-bold text-[16px] leading-[24px] text-center text-[#252B42]">
         Graphic Design
       </h5>
       <p className="w-full  font-bold text-[14px] leading-[24px] text-center text-[#737373]">
@@ -30,6 +31,7 @@ export default function CardText() {
       <div className="w-[82.2px] h-[16px] flex justify-center">
         <Image src={coloursIcon} alt="colours" />
       </div>
-    </div>
+    </div></Link>
+    </>
   );
 }
