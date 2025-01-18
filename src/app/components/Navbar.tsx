@@ -16,6 +16,8 @@ import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
+import { useSelector } from "react-redux";
+
 
 
 const montserrat = Montserrat({
@@ -32,6 +34,7 @@ const montserrat = Montserrat({
 const Navbar = (props:NavbarType) => {
   const {style} =props
 
+  
     const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -81,7 +84,7 @@ const Navbar = (props:NavbarType) => {
                     <div className='w-[150px] md:w-[324px] h-[54px] flex justify-center items-center list-none text-[#23A6F0] '>
                         <li className='hidden md:flex w-[166px] h-[54px]  items-center hover:text-[#252B42]'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><a href="" className=''><button className='text-xs flex'><CiSearch className='text-base'/></button></a></li>
-                            <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><a href="" className=''><button className='text-xs flex'><IoCartOutline className='text-base'/>1</button></a></li>
+                            <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Link href="/cart" className=''><button className='text-xs flex'><IoCartOutline className='text-base'/></button></Link></li>
                             <li className='hidden md:flex w-[46px] h-[46px]  items-center hover:text-[#252B42]'><a href="" className=''><button className='text-xs flex'><CiHeart className='text-base'/>1</button></a></li>
 
                             <button

@@ -1,24 +1,41 @@
-import Image from "next/image";
-import CardText from "../components/card";
 
-// Define product data
-const products = [
-  { src: "/Home/product-cover-5.png", alt: "Product 1" },
-  { src: "/Home/product-cover-5 (1).png", alt: "Product 2" },
-  { src: "/Home/product-cover-5 (2).png", alt: "Product 3" },
-  { src: "/Home/product-cover-5 (3).png", alt: "Product 4" },
-  { src: "/Home/product-cover-5 (4).png", alt: "Product 5" },
-  { src: "/Home/product-cover-5 (5).png", alt: "Product 6" },
-  { src: "/Home/product-cover-5 (6).png", alt: "Product 7" },
-  { src: "/Home/product-cover-5 (7).png", alt: "Product 8" },
-];
+import Card from "../components/card";
+import { client } from "@/sanity/lib/client";
+import { Montserrat } from 'next/font/google';
 
-const BestSeller = () => {
+const montserrat = Montserrat({
+  weight: ['400', '700'],
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap'
+});
+
+interface Tproduct {
+  title: string;
+  description: string;
+  discountedprice: number;
+  price: number;
+  imageUrl: string;
+  id:string;
+}
+
+const BestSeller = async () => {
+  const data = await client.fetch(`*[_type == "product"]{
+  id,
+  title,
+  description,
+  price,
+  discountedprice,
+  "imageUrl":productImage.asset->url
+}`)
+
+     
+
   return (
     <div className="w-screen mt-10 flex justify-center">
       <div className="w-[328px] md:w-[1124px] py-[80px] flex flex-col items-center gap-[80px]">
         {/* Text Section */}
-        <div className="w-[300px] md:w-[500px] text-center">
+        <div className={` ${montserrat.className} w-[300px] md:w-[500px] text-center`}>
           <h4 className="font-normal text-[20px] text-[#737373]">
             Featured Products
           </h4>
@@ -32,12 +49,17 @@ const BestSeller = () => {
 
         {/* Card Section */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-          {products.map((product, index) => (
-            <div key={index} className="w-[238px] h-[615px] mx-auto">
-              <div className="w-[239px] h-[427px]">
-                <Image src={product.src} alt={product.alt} width={239} height={427} className="hover:scale-95 duration-500 hover:opacity-80"/>
-              </div>
-              <CardText />
+          {data.slice(0,8).map((product: Tproduct, index: number) => (
+            <div key={index}>
+
+              <Card
+                title={product.title}
+                description={product.description}
+                discountedprice={product.discountedprice}
+                price={product.price}
+                imageUrl={product.imageUrl}
+                 id={product.id} />
+
             </div>
           ))}
         </div>

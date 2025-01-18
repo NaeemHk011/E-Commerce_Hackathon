@@ -1,7 +1,9 @@
-import Image from "next/image";
-import CardText from "../components/card";
 
-import { Montserrat } from "next/font/google";
+
+import Card from "../components/card";
+import { client } from "@/sanity/lib/client";
+import { Montserrat } from 'next/font/google';
+
 const montserrat = Montserrat({
   weight: ['400', '700'],
   style: 'normal',
@@ -9,37 +11,49 @@ const montserrat = Montserrat({
   display: 'swap'
 });
 
+interface Tproduct {
+  title: string;
+  description: string;
+  discountedprice: number;
+  price: number;
+  imageUrl: string;
+  id:string;
+}
 
-// Define product data
-const products = [
-  { src: "/product/fixed-height.png", alt: "Product 1" },
-  { src: "/product/fixed-height (1).png", alt: "Product 2" },
-  { src: "/product/fixed-height (2).png", alt: "Product 3" },
-  { src: "/product/fixed-height (3).png", alt: "Product 4" },
-  { src: "/product/fixed-height (4).png", alt: "Product 5" },
-  { src: "/product/fixed-height (5).png", alt: "Product 6" },
-  { src: "/product/fixed-height (6).png", alt: "Product 7" },
-  { src: "/product/fixed-height (7).png", alt: "Product 8" },
- 
-];
 
-const BestProduct = () => {
+
+const BestProduct = async () => {
+  const data = await client.fetch(`*[_type == "product"]{
+  id,
+  title,
+  description,
+  price,
+  discountedprice,
+  "imageUrl":productImage.asset->url
+}`)
+  
+
   return (
     <div className="w-screen mt-10 flex justify-center  bg-[#FAFAFA]">
       <div className="w-[328px] md:w-[1124px] py-[80px] flex flex-col items-center gap-[120px]">
-       
+
         {/* Card Section */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-[30px]">
-          {products.map((product, index) => (
-            <div key={index} className="w-[238px] h-[470px] bg-white mx-auto">
-              <div className="w-[239px] h-[300px]">
-                <Image src={product.src} alt={product.alt} width={239} height={300} className="hover:scale-95 duration-500" />
-              </div>
-              <CardText />
+          {data.slice(8,16).map((product: Tproduct) => (
+            <div key={product.id}>
+
+              <Card
+                title={product.title}
+                description={product.description}
+                discountedprice={product.discountedprice}
+                price={product.price}
+                imageUrl={product.imageUrl}
+                 id={product.id} />
+
             </div>
           ))}
         </div>
-       
+
       </div>
     </div>
   );
