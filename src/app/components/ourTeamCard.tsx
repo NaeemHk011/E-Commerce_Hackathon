@@ -1,15 +1,9 @@
 import Image from "next/image";
-import { Montserrat } from 'next/font/google';
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
-const montserrat = Montserrat({
-    weight: ['400', '700'],
-    style: 'normal',
-    subsets: ['latin'],
-    display: 'swap'
-});
+
 
 interface Tteam {
     username: string;
@@ -22,7 +16,7 @@ export default function OurTeamCard(team: Tteam) {
         <>
             <div className="w-[238px] h-[315px] mx-auto">
                 <div className="w-[239px] h-[327px]">
-                    <div className={` ${montserrat.className} w-[316] h-[283px] flex flex-col hover:scale-95 duration-500 bg-white`}>
+                    <div className={` w-[316] h-[283px] flex flex-col hover:scale-95 duration-500 bg-white`}>
                         <Image src={team.userImage} alt='image' width={250} height={300} className='w-[316px] h-[231px]' />
                         <div className='w-full h-[152px] flex justify-center items-center flex-col gap-[10px]'>
                             <h5 className='font-bold text-[16px] leading-[24px] text-[#252B42]'>{team.username}</h5>

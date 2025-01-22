@@ -2,18 +2,12 @@ import React from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Button from '../components/button';
 
-import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
+
 
 
 const FreeTrial = () => {
   return (
-    <div className={`${montserrat.className}  w-full h-[282px] flex flex-col justify-center items-center mt-20 text-center md:mt-10 bg-white gap-7`}>
+    <div className={`  w-full h-[282px] flex flex-col justify-center items-center mt-20 text-center md:mt-10 bg-white gap-7`}>
       {/* Title */}
       <h2 className="font-bold text-[30px] md:text-[40px] leading-[50px] text-[#252B42]">
         Start your 14 days free trial

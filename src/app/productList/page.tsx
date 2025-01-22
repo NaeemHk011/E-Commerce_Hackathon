@@ -13,16 +13,12 @@ const ProductList = () => {
         <div className=' hidden md:block'>
         <Companies/>
         </div>
-        <div className=' hidden md:block'>
-        <Footer/>
-        </div>
         <List/>
         <div className=' block md:hidden'>
         <Companies/>
         </div>
-        <div className=' block md:hidden'>
         <Footer/>
-        </div>
+        
     </div>
   )
 }

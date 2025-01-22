@@ -3,19 +3,13 @@ import Image from 'next/image';
 import image from '../../../public/product/quickimage.png';
 
 
-import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
+
 
 const QuickReview = () => {
   return (
     <div className="max-w-6xl mx-auto p-4 mt-5 flex flex-col justify-center items-center">
       {/* Tabs Navigation */}
-      <div className={`${montserrat.className} flex flex-wrap gap-4 border-b justify-center  border-gray-200 mb-10 w-full`}>
+      <div className={` flex flex-wrap gap-4 border-b justify-center  border-gray-200 mb-10 w-full`}>
         <p className="pb-2 text-[#737373] font-bold text-sm leading-6 cursor-pointer">
           Description
         </p>
@@ -39,7 +33,7 @@ const QuickReview = () => {
         </div>
 
         {/* Center Column */}
-        <div className={`${montserrat.className} flex flex-col items-center md:items-start gap-4 w-full md:w-1/3`}>
+        <div className={` flex flex-col items-center md:items-start gap-4 w-full md:w-1/3`}>
           <h3 className="text-xl md:text-2xl font-bold leading-8 text-[#252B42]">
             the quick fox jumps over
           </h3>
@@ -60,7 +54,7 @@ const QuickReview = () => {
         </div>
 
         {/* Right Column */}
-        <div className={`${montserrat.className} flex flex-col items-center md:items-start gap-4 w-full md:w-1/3`}>
+        <div className={` flex flex-col items-center md:items-start gap-4 w-full md:w-1/3`}>
           <h3 className="text-xl md:text-2xl font-bold leading-8 text-[#252B42]">
             the quick fox jumps over
           </h3>

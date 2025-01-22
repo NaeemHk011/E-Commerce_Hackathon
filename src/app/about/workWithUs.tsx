@@ -2,14 +2,7 @@ import Image from "next/image";
 import Button from "../components/button";
 import image1 from "../../../public/About/unsplash_work.png";
 
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 const WorkWithUs = () => {
   return (
@@ -18,7 +11,7 @@ const WorkWithUs = () => {
 
         {/* Text Section */}
         <div
-          className={`${montserrat.className} md:absolute md:left-[15%] w-[350px] md:w-[538px] h-auto flex flex-col gap-[20px] justify-center items-center lg:items-start text-center lg:text-left`}>
+          className={` md:absolute md:left-[15%] w-[350px] md:w-[538px] h-auto flex flex-col gap-[20px] justify-center items-center lg:items-start text-center lg:text-left`}>
           <h5 className="text-[16px] font-bold leading-[24px] text-[#FFFFFF]">
             WORK WITH US
           </h5>

@@ -6,14 +6,7 @@ import { FaRegClock } from "react-icons/fa6";
 import { LiaComments } from "react-icons/lia";
 import { IoIosArrowForward } from "react-icons/io";
 
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
 
 
 
@@ -22,7 +15,7 @@ const FeaturedPosts = () => {
     return (
       <div className=" w-screen md:w-1050 h-[1044] flex flex-col justify-center items-center py-28 mt-5 gap-20 ">
         {/* Section Header */}
-        <div className={`${montserrat.className} w-[350px] md:w-[691px] h[134px] flex flex-col items-center gap-[10px] `}>
+        <div className={` w-[350px] md:w-[691px] h[134px] flex flex-col items-center gap-[10px] `}>
             <h6 className='font-bold text-sm leading-6 tracking-[0.200px] text-center text-[#23A6F0]'>Practice Advice</h6>
           <h2 className="font-bold text-[40px] leading-[50px] tracking-[0.200px] text-center text-[#737373]">Featured Posts</h2>
           <p className="w-[300px] md:w-[469px] h-10 font-normal text-sm leading-5 text-center text-[#737373] ">
@@ -33,7 +26,7 @@ const FeaturedPosts = () => {
         {/* Cards Grid */}
         <div className="flex flex-col md:flex-row gap-5 w-screen md:w-[1045px] justify-center items-center h-full  md:h-[606px]  ">
           {/* Card 1 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px] mx-auto bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
+            <div className={` w-[338px] h-[606px] mx-auto bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               <div className="relative">
                 <Image src={image1} alt='Loudest' className="w-full h-[300px] object-cover" />
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded">
@@ -59,7 +52,7 @@ const FeaturedPosts = () => {
               </div>
             </div>
            {/* Card 2 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
+            <div className={` w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               {/* Post Image */}
               <div className="relative">
                 <Image src={image2} alt='Loudest' className="w-full h-[300px] object-cover " />
@@ -86,7 +79,7 @@ const FeaturedPosts = () => {
               </div>
             </div>
               {/* Card 3 */}
-            <div className={`${montserrat.className} w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
+            <div className={` w-[338px] h-[606px]  bg-white shadow-md hover:scale-95 duration-500 rounded-lg overflow-hidden`}>
               
               <div className="relative">
                 <Image src={image3} alt='Loudest' className="w-full h-[300px] object-cover" />

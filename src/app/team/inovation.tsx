@@ -8,18 +8,12 @@ import image3 from "../../../public/innovate/unsplash_3.png";
 import image4 from "../../../public/innovate/unsplash_4.png";
 import image5 from "../../../public/innovate/unsplash_5.png";
 
-import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
+
 
 const Inovation = () => {
   return (
     <div className="w-screen h-auto flex flex-col justify-center mt-10 items-center px-4">
-      <div className={`${montserrat.className} w-full  max-w-[827px] flex flex-col items-center gap-4`}>
+      <div className={` w-full  max-w-[827px] flex flex-col items-center gap-4`}>
         <h5 className="text-base font-bold leading-6 tracking-[0.100px] text-center text-[#737373]">WHAT WE DO</h5>
         <h5 className="text-[28px] md:text-[52px] font-bold leading-snug text-center text-[#252B42]">
           Innovation tailored for you

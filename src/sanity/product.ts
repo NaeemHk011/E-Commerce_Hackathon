@@ -42,6 +42,12 @@ export  const product ={
         type:"image",
         title:"Product Image"
         },
+        {
+            name: "category",
+            type: "array",
+            title: "Category",
+            of: [{ type: "string" }]
+        },
 
         
     ]

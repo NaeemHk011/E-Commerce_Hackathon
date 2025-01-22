@@ -1,41 +1,39 @@
-
+"use client"
+import { useEffect, useState } from "react";
 import Card from "../components/card";
 import { client } from "@/sanity/lib/client";
-import { Montserrat } from 'next/font/google';
+import { Tproduct } from "../../../utils/componentType";
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
 
-interface Tproduct {
-  title: string;
-  description: string;
-  discountedprice: number;
-  price: number;
-  imageUrl: string;
-  id:string;
-}
 
-const BestSeller = async () => {
-  const data = await client.fetch(`*[_type == "product"]{
-  id,
-  title,
-  description,
-  price,
-  discountedprice,
-  "imageUrl":productImage.asset->url
-}`)
 
-     
+const BestSeller = () => {
+    const [data, setData] = useState<Tproduct[]>([]);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        const result = await client.fetch(
+          `*[_type == "product"]{
+            id,
+            title,
+            description,
+            price,
+            discountedprice,
+            "imageUrl":productImage.asset->url
+          }`
+        );
+        setData(result);
+      };
+  
+      fetchData();
+    }, []);
+  
 
   return (
     <div className="w-screen mt-10 flex justify-center">
       <div className="w-[328px] md:w-[1124px] py-[80px] flex flex-col items-center gap-[80px]">
         {/* Text Section */}
-        <div className={` ${montserrat.className} w-[300px] md:w-[500px] text-center`}>
+        <div className={`  w-[300px] md:w-[500px] text-center`}>
           <h4 className="font-normal text-[20px] text-[#737373]">
             Featured Products
           </h4>
@@ -53,12 +51,12 @@ const BestSeller = async () => {
             <div key={index}>
 
               <Card
-                title={product.title}
-                description={product.description}
-                discountedprice={product.discountedprice}
-                price={product.price}
-                imageUrl={product.imageUrl}
-                 id={product.id} />
+                      title={product.title}
+                      description={product.description}
+                      discountedprice={product.discountedprice}
+                      price={product.price}
+                      imageUrl={product.imageUrl}
+                      id={product.id} quantity={undefined} />
 
             </div>
           ))}

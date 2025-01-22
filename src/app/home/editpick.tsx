@@ -5,19 +5,12 @@ import editpack2 from "../../../public/Home/editpick2.png";
 import editpack3 from "../../../public/Home/editpick3.png";
 import editpack4 from "../../../public/Home/editpick4.png";
 import Button from '../components/button';
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
 
 const Editpick = () => {
   return (
     <div>
-      <div className={`w-full h-auto px-6 md:px-[195px] flex flex-col bg-[#FAFAFA] ${montserrat.className}`}>
+      <div className={`w-full h-auto px-6 md:px-[195px] flex flex-col bg-[#FAFAFA] `}>
         <div className="w-full py-10 md:py-28 gap-6 md:gap-12 flex flex-col">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-center text-lg md:text-xl font-bold mb-2 text-[#252B42]">EDITOR&apos;S PICK</h2>

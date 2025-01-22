@@ -1,24 +1,11 @@
 import Image from "next/image";
-import coloursIcon from "../../../public/Home/product-colors.png"
+
 import Link from "next/link";
-import { Montserrat } from 'next/font/google';
 import ColorCircles from "./colors";
+import { Tproduct } from "../../../utils/componentType";
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
 
-interface Tproduct {
-  title: string;
-  description: string;
-  discountedprice: number;
-  price: number;
-  imageUrl: string;
-  id:string;
-}
+
 
 export default function Card(product: Tproduct) {
   return (
@@ -27,7 +14,7 @@ export default function Card(product: Tproduct) {
         <div className="w-[239px] h-full rounded-md shadow-lg">
           <Image src={product.imageUrl} alt={product.title} width={200} height={250} className="w-[250px] h-[350px] object-cover  hover:scale-95 duration-500 hover:opacity-80" />
           <Link href={`productList/${product.id}`}>
-            <div className={`${montserrat.className} w-full h-[158px] py-[25px] px-[5px] flex flex-col items-center justify-center `}>
+            <div className={` w-full h-[158px] py-[25px] px-[5px] flex flex-col items-center justify-center `}>
               <h5 className="w-full  font-bold text-[16px] leading-[20px] text-center text-[#252B42]">
                 {product.title}
               </h5>

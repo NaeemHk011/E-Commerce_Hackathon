@@ -3,14 +3,7 @@ import Image from "next/image";
 import image from "../../../public/Home/universeImage.png";
 import Button from "../components/button";
 
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap'
-});
 
 const Universe = ()=> {
   return (
@@ -27,7 +20,7 @@ const Universe = ()=> {
         </div>
 
         {/* Text Section */}
-        <div className={`${montserrat.className} w-[350px] lg:w-[573px] h-auto flex flex-col gap-[20px] justify-center items-center lg:items-start text-center lg:text-left mt-[20px] lg:mt-0`}>
+        <div className={` w-[350px] lg:w-[573px] h-auto flex flex-col gap-[20px] justify-center items-center lg:items-start text-center lg:text-left mt-[20px] lg:mt-0`}>
           <h5 className="text-[16px]  font-bold leading-[24px] text-[#BDBDBD]">
             SUMMER 2020
           </h5>

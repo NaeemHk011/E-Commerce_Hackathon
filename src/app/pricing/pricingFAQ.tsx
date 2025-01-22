@@ -3,20 +3,14 @@ import { AiOutlineRight } from "react-icons/ai";
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Button from '../components/button';
 
-import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: 'normal',
-  subsets: ['latin'],
-  display: 'swap',
-});
+
 
 const PricingFAQ = () => {
   return (
     <div className="w-full flex flex-col items-center bg-white">
       <div className="w-full md:w-[1056px] flex flex-col items-center py-10 gap-10">
         {/* Title Section */}
-        <div className={`${montserrat.className} text-center w-[90%] md:w-[607px]`}>
+        <div className={` text-center w-[90%] md:w-[607px]`}>
           <h2 className="font-bold text-[28px] md:text-[40px] leading-[34px] md:leading-[50px] text-[#252B42]">
             Pricing FAQs
           </h2>
@@ -30,7 +24,7 @@ const PricingFAQ = () => {
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className={`${montserrat.className} flex flex-col items-center md:items-start gap-2 p-4 md:p-[25px] bg-white shadow-md rounded-lg`}
+              className={` flex flex-col items-center md:items-start gap-2 p-4 md:p-[25px] bg-white shadow-md rounded-lg`}
             >
               <h3 className="text-base font-bold leading-6 flex items-center text-[#252B42]">
                 <AiOutlineRight /> The quick fox jumps over the lazy dog
@@ -52,7 +46,7 @@ const PricingFAQ = () => {
         </div>
 
         {/* Free Trial Section */}
-        <div className={`${montserrat.className} w-full flex flex-col items-center py-8 px-4 md:px-0 text-center bg-white mt-10 md:mt-16`}>
+        <div className={` w-full flex flex-col items-center py-8 px-4 md:px-0 text-center bg-white mt-10 md:mt-16`}>
           {/* Title */}
           <h2 className="font-bold text-[28px] md:text-[40px] leading-[34px] md:leading-[50px] text-[#252B42]">
             Start your 14 days free trial

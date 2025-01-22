@@ -25,7 +25,7 @@ const AddToCartBtn = ({ id }: { id: number }) => {
 
     return (
         <button
-            className="py-4 px-10 bg-slate-300 flex items-center gap-x-2 rounded-lg text-black hover:bg-slate-400 max-sm:w-full"
+            className="py-4 px-8 bg-slate-300 flex items-center gap-x-2 rounded-lg text-center text-black hover:bg-slate-400 "
             onClick={addToCart}
         >
             <IoCartOutline/>
