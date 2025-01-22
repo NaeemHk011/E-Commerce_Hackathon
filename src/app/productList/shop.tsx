@@ -1,6 +1,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Shop = () => {
   const items = [
@@ -18,9 +19,10 @@ const Shop = () => {
         {items.map((item) => (
           <Link key={item.id} href={item.link} passHref>
             <div className="relative group rounded-lg overflow-hidden shadow-lg">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                height={200} width={200}
                 className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
