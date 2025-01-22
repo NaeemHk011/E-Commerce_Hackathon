@@ -44,8 +44,8 @@ const OurTeam = () => {
               >
                 <OurTeamCard
                   username={member.username}
-                  profession={member.profession}
-                  userImage={member.imageUrl}
+                  profession={member.profession} 
+                  imageUrl={member.imageUrl}                  
                 />
               </div>
             ))}

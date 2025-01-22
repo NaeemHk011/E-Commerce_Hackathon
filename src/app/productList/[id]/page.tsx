@@ -47,7 +47,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
   };
 
   if (!productData) {
-    return <p>Loading...</p>; // Loading state
+    return <p>Loading...</p>; 
   }
 
   return (
@@ -88,8 +88,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
           <div className="flex flex-col md:flex-row items-center gap-4">
             <button
               onClick={() => addToWishlist(productData)}
-              className="text-md text-white hover:text-slate-800 flex items-center gap-2 bg-slate-800 hover:bg-slate-400 rounded-lg py-2 md:py-3 px-4 md:px-5"
-            >
+              className="text-md text-white hover:text-slate-800 flex items-center gap-2 bg-slate-800 hover:bg-slate-400 rounded-lg py-2 md:py-3 px-4 md:px-5">
               <AiOutlineHeart /> Add to wishlist
             </button>
             <CartButton id={Number(params.id)} />
