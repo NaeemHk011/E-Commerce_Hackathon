@@ -40,7 +40,7 @@ const InnovateTeam = () => {
               <OurTeamCard
                 username={member.username}
                 profession={member.profession}
-                userImage={member.imageUrl}
+                 imageUrl={member.imageUrl}                
               />
             </div>
           ))}
