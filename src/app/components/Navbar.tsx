@@ -67,6 +67,7 @@ const Navbar = (props:NavbarType) => {
                     <Link href="/about"className='text-sm font-bold leading-6 tracking-[0.200] hover:text-[#23A6F0]' >About</Link>
                     <Link href="/contact"className='text-sm font-bold leading-6 tracking-[0.200] hover:text-[#23A6F0]' >Contact</Link>
                     <Link href="/team"className='text-sm font-bold leading-6 tracking-[0.200] hover:text-[#23A6F0]' >Team</Link>
+                    <Link href="/pricing"className='text-sm font-bold leading-6 tracking-[0.200] hover:text-[#23A6F0]' >Pricing</Link>
                     </div>
                     </div>
                     <div className=''>
@@ -74,7 +75,7 @@ const Navbar = (props:NavbarType) => {
                         <li className='hidden md:flex w-[166px] h-[54px]  items-center hover:text-[#252B42]'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><a href="" className=''><button className='text-xs flex'><CiSearch className='text-2xl'/></button></a></li>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Link href="/cart" className=''><button className='text-xs flex'><IoCartOutline className='text-2xl'/></button></Link></li>
-                            <li className='hidden md:flex w-[46px] h-[46px]  items-center hover:text-[#252B42]'><Link href="/wishlist" className=''><button className='text-xs flex'><CiHeart className='text-2xl'/></button></Link></li>
+                            <li className='flex w-[46px] h-[46px]  items-center hover:text-[#252B42]'><Link href="/wishlist" className=''><button className='text-xs flex'><CiHeart className='text-2xl'/></button></Link></li>
 
                             <button
             className="text-2xl md:hidden"
@@ -93,6 +94,7 @@ const Navbar = (props:NavbarType) => {
                 <Link href="/about" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">About</Link>
                 <Link href="/pricing" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Pricing</Link>
                 <Link href="/contact" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Contact</Link>
+                <Link href="/team" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Team</Link>
               </div>
             </div>)}
             </div>

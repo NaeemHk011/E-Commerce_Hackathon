@@ -7,7 +7,6 @@ import Image from "next/image";
 import CartButton from "@/app/components/cartButton";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/footer";
-import BestProduct from "../bestProduct";
 import QuickReview from "../quickReview";
 import Companies from "@/app/about/companies";
 import { client } from "@/sanity/lib/client";
@@ -112,7 +111,6 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
       </div>
-      <BestProduct />
       <Companies />
       <QuickReview />
       <Footer />

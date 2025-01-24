@@ -1,14 +1,14 @@
 import React from 'react'
-import AboutNav from '../about/aboutNav'
 import Inovation from './inovation'
 import InnovateTeam from './innovateteam'
 import FreeTrial from '../pricing/freetrail'
 import Footer from '../components/footer'
+import Navbar from '../components/Navbar'
 
 const Team = () => {
   return (
     <div> 
-        <AboutNav/>
+        <Navbar style='bg-[#23856D]'/>
         <Inovation/>
         <InnovateTeam/>
         <FreeTrial/>

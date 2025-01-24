@@ -1,16 +1,16 @@
 import React from 'react'
-import AboutNav from '../about/aboutNav'
 import Simplepricing from './simplepricing'
 import Companies from '../about/companies'
 import PricingFAQ from './pricingFAQ'
 import Footer from '../components/footer'
+import Navbar from '../components/Navbar'
 
 
 
 const Pricing = () => {
   return (
     <div>
-        <AboutNav/>
+        <Navbar style='bg-[#23856D]'/>
         <Simplepricing/>
         <Companies/>
         <PricingFAQ/>
