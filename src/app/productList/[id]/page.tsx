@@ -72,7 +72,24 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
               <IoIosArrowForward />
             </button>
           </div>
+          {/* Thumbnails */}
+        <div className="flex gap-2 mt-4">
+              <Image
+                src={productData.imageUrl}
+                alt="Thumbnail"
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px]  object-center rounded-md cursor-pointer"/>
+
+              <Image
+                src={productData.imageUrl}
+                alt="Thumbnail"
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px] object-center rounded-md cursor-pointer"/>
+            </div>
         </div>
+     
 
         {/* Right: Product Details */}
         <div className="flex flex-col gap-0 md:gap-4">
