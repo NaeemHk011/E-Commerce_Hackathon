@@ -14,6 +14,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
+import Search from './search';
 
 
 
@@ -73,7 +74,7 @@ const Navbar = (props:NavbarType) => {
                     <div className=''>
                     <div className='w-[150px] md:w-[324px] h-[54px] flex justify-center items-center list-none text-[#23A6F0] '>
                         <li className='hidden md:flex w-[166px] h-[54px]  items-center hover:text-[#252B42]'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
-                            <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><a href="" className=''><button className='text-xs flex'><CiSearch className='text-2xl'/></button></a></li>
+                            <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Search /></li>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Link href="/cart" className=''><button className='text-xs flex'><IoCartOutline className='text-2xl'/></button></Link></li>
                             <li className='flex w-[46px] h-[46px]  items-center hover:text-[#252B42]'><Link href="/wishlist" className=''><button className='text-xs flex'><CiHeart className='text-2xl'/></button></Link></li>
 
@@ -95,6 +96,7 @@ const Navbar = (props:NavbarType) => {
                 <Link href="/pricing" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Pricing</Link>
                 <Link href="/contact" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Contact</Link>
                 <Link href="/team" className=" text-[#737373] text-[30px] font-normal leading-[45px] tracking-[0.200] hover:text-blue-500">Team</Link>
+                <li className='flex w-[166px] h-[54px]  items-center hover:text-[#252B42]'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
               </div>
             </div>)}
             </div>

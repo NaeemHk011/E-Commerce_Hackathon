@@ -22,7 +22,7 @@ const Editpick = () => {
           {/* Images Container */}
           <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[30px] text-[#252B42]">
             {/* Image 1 */}
-            <div className="relative w-full md:w-[500px] h-[600px] md:h-[510px]">
+            <div className="relative w-full md:w-[500px] h-[400px] md:h-[510px]">
               <Image src={editpack1} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
               <div className="absolute left-4 bottom-4 md:bottom-8">
                 <Button
@@ -33,8 +33,8 @@ const Editpick = () => {
             </div>
 
             {/* Image 2 */}
-            <div className="relative w-full md:w-[270px] h-[600px] md:h-[510px]">
-              <Image src={editpack2} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
+            <div className="relative w-full md:w-[270px] h-[400px] md:h-[510px]">
+              <Image src={editpack2} alt="image" className="w-full h-full md:object-cover object-top hover:scale-95 duration-500" />
               <div className="absolute left-4 bottom-4 md:bottom-8">
                 <Button
                   title="WOMEN"
@@ -47,7 +47,7 @@ const Editpick = () => {
             <div className="w-full md:w-[240px] flex flex-col gap-6">
               {/* Image 3 */}
               <div className="relative w-full h-[242px] md:h-[242px] ">
-                <Image src={editpack3} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
+                <Image src={editpack3} alt="image" className="w-full h-full md:object-cover object-top  hover:scale-95 duration-500" />
                 <div className="absolute left-4 bottom-4">
                   <Button
                     title="ACCESSORIES"
@@ -58,7 +58,7 @@ const Editpick = () => {
 
               {/* Image 4 */}
               <div className="relative w-full h-[242px] md:h-[242px]">
-                <Image src={editpack4} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
+                <Image src={editpack4} alt="image" className="w-full h-full md:object-cover object-top hover:scale-95 duration-500" />
                 <div className="absolute left-4 bottom-4">
                   <Button
                     title="KIDS"

@@ -7,50 +7,49 @@ import Image from "next/image";
 import { Tproduct } from "../../../utils/componentType";
 
 const CartProducts = () => {
-    const [products, setProducts] = useState<any[]>();
+    const [products, setProducts] = useState<Tproduct[]>([]);
 
     useEffect(() => {
         const fetchProducts = async () => {
             const cart = JSON.parse(localStorage.getItem('cart')!);
             if (cart) {
-                let cartProducts = await client.fetch(`*[_type == "product" && id in $cart ]{
-                title,
-                description,
-                discountedprice,
-                price,
-                "imageUrl": productImage.asset->url,
-                id
-                }`
-                    , { cart }
+                const cartProducts = await client.fetch(
+                    `*[_type == "product" && id in $cart]{
+                        title,
+                        price,
+                        "imageUrl": productImage.asset->url,
+                        id
+                    }`, { cart }
                 );
-                cartProducts = cartProducts.map((product: any) => ({ ...product, quantity: 1 }));
-                setProducts(cartProducts);
-            } else {
-                alert('Cart is empty');
+                const productsWithQuantity = cartProducts.map((product: any) => ({ ...product, quantity: 1 }));
+                setProducts(productsWithQuantity);
             }
         };
         fetchProducts();
     }, []);
 
     const increment = (i: number) => {
-        const temp: any[] = products ? [...products] : [];
-        temp[i].quantity && temp[i].quantity++;
-        setProducts(temp);
-    };
-    const decrement = (i: number) => {
-        const temp: any[] = products ? [...products] : [];
-        (temp[i].quantity && temp[i].quantity > 1) && temp[i].quantity--;
-        setProducts(temp);
+        const updatedProducts = [...products];
+        updatedProducts[i].quantity++;
+        setProducts(updatedProducts);
     };
 
-    const totalAmount = (): number => {
-        return products?.reduce((acc, product) => acc + product.quantity * product.price, 0);
+    const decrement = (i: number) => {
+        const updatedProducts = [...products];
+        if (updatedProducts[i].quantity > 1) updatedProducts[i].quantity--;
+        setProducts(updatedProducts);
+    };
+
+    const totalAmount = () => {
+        return products.reduce((acc, product) => acc + product.quantity * product.price, 0);
     };
 
     const handleCheckout = () => {
         localStorage.removeItem('cart');
         setProducts([]);
     };
+
+    const isCartEmpty = products.length === 0;
 
     return (
         <>
@@ -63,32 +62,23 @@ const CartProducts = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {products?.map((product:Tproduct, i: any) => (
-                        <tr className="sm:*:pt-5" key={product.id}>
+                    {products.map((product, i) => (
+                        <tr key={product.id}>
                             <td>
                                 <div className="flex gap-x-[21px] sm:items-center">
-                                    <Image src={product.imageUrl} alt="Failed to load" width={64} height={64} className="size-16" />
-                                    <div className="space-y-2 max-sm:mt-[19px] grow">
+                                    <Image src={product.imageUrl} alt="Failed to load" width={64} height={64} />
+                                    <div className="space-y-2 max-sm:mt-[19px]">
                                         <h4 className="text-[16px] leading-[20px]">{product.title}</h4>
-                                        <div>
-                                            <p>${product.price}</p>
-                                            <div className="py-3 px-4 sm:hidden flex items-center gap-x-8">
-                                                <button onClick={() => increment(i)}>+</button>
-                                                <span>{product.quantity}</span>
-                                                <button onClick={() => decrement(i)}>-</button>
-                                            </div>
-                                        </div>
+                                        <p>${product.price}</p>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                                <div className="py-3 px-4 max-sm:hidden flex items-center gap-x-8">
-                                    <button onClick={() => increment(i)}>+</button>
-                                    <span>{product.quantity}</span>
-                                    <button onClick={() => decrement(i)}>-</button>
-                                </div>
+                            <td className="py-3 px-4 max-sm:hidden flex items-center gap-x-8">
+                                <button onClick={() => increment(i)}>+</button>
+                                <span>{product.quantity}</span>
+                                <button onClick={() => decrement(i)}>-</button>
                             </td>
-                            <td className="max-sm:hidden text-center sm:w-28">£{product.quantity * product.price}</td>
+                            <td className="max-sm:hidden text-center sm:w-28">${product.quantity * product.price}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -100,18 +90,22 @@ const CartProducts = () => {
                         <h4 className="text-[--primary]">Subtotal</h4>
                         <h3 className="text-[--dark-primary]">${totalAmount()}</h3>
                     </div>
-                    <p className="max-sm:whitespace-nowrap max-sm:w-fit ml-auto text-sm text-[--primary]">
+                    <p className="max-sm:whitespace-nowrap text-sm text-[--primary]">
                         Taxes and shipping are calculated at checkout
                     </p>
                 </div>
-                <Link href="/">
-                    <button
-                        type="button"
-                        onClick={handleCheckout}
-                        className="bg-[--dark-primary] max-sm:w-full block w-fit ml-auto bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]"
-                    > Go to checkout
-                    </button>
-                </Link>
+
+                {!isCartEmpty && (
+                    <Link href="/">
+                        <button
+                            type="button"
+                            onClick={handleCheckout}
+                            className="bg-[--dark-primary] max-sm:w-full block w-fit ml-auto bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]"
+                        >
+                            Go to checkout
+                        </button>
+                    </Link>
+                )}
             </div>
         </>
     );

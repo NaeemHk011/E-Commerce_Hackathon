@@ -11,6 +11,9 @@ import QuickReview from "../quickReview";
 import Companies from "@/app/about/companies";
 import { client } from "@/sanity/lib/client";
 import { Tproduct } from "../../../../utils/componentType";
+import { Bounce, ToastContainer , toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const ProductDetail = ({ params }: { params: { id: string } }) => {
   const [productData, setProductData] = useState<Tproduct | null>(null);
@@ -42,7 +45,20 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
     const existingWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
     const updatedWishlist = [...existingWishlist, product];
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
-    alert(`${product.title} has been added to your wishlist!`);
+     const notify = () => {
+            toast.success('Added To The Wishlist', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+                });
+          }
+          notify()
   };
 
   if (!productData) {
@@ -51,8 +67,9 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+    <ToastContainer />
       <Navbar style="bg-[#23856D]" />
-      <div className="flex flex-col md:flex-row gap-6 p-6 mt-5 bg-[#FAFAFA] rounded-md shadow-lg">
+      <div className="flex flex-col h-full mb-20 md:flex-row gap-6 p-6 mt-5 bg-[#FAFAFA] rounded-md shadow-lg">
         {/* Left: Product Images */}
         <div className="flex flex-col items-center gap-4">
           <div className="relative">
@@ -101,10 +118,10 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
           <p className="text-sm w-[300px] md:w-[464px] text-[#858585] font-normal leading-5 mb-4">
             {productData.longdescription}
           </p>
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-4">
             <button
               onClick={() => addToWishlist(productData)}
-              className="text-md text-white hover:text-slate-800 flex items-center gap-2 bg-slate-800 hover:bg-slate-400 rounded-lg py-2 md:py-3 px-4 md:px-5">
+              className="text-md text-white hover:text-slate-800 flex items-center gap-2 bg-slate-800 hover:bg-slate-400 rounded-lg py-3 md:py-4 px-4 md:px-5">
               <AiOutlineHeart /> Add to wishlist
             </button>
             <CartButton id={Number(params.id)} />

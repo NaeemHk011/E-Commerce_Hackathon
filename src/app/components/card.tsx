@@ -12,7 +12,7 @@ export default function Card(product: Tproduct) {
     <>
       <div className="w-[238px] h-[530px] mx-auto">
         <div className="w-[239px] h-full rounded-md shadow-lg">
-          <Image src={product.imageUrl} alt={product.title} width={200} height={250} className="w-[250px] h-[350px] object-cover  hover:scale-95 duration-500 hover:opacity-80" />
+          <Image src={product.imageUrl} alt={product.title} priority width={200} height={250} className="w-[250px] h-[350px] object-cover  hover:scale-95 duration-500 hover:opacity-80" />
           <Link href={`productList/${product.id}`}>
             <div className={` w-full h-[158px] py-[25px] px-[5px] flex flex-col items-center justify-center `}>
               <h5 className="w-full  font-bold text-[16px] leading-[20px] text-center text-[#252B42]">
