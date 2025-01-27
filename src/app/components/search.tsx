@@ -64,18 +64,18 @@ const Search = () => {
       </button>
 
       {showInput && (
-        <div className="absolute top-12 left-0 w-full flex justify-center items-center z-50">
+        <div className="absolute top-12 left-0  w-full flex justify-center items-center z-50">
           <input
             type="text"
             placeholder="Search products..."
             value={searchTerm}
             onChange={handleSearch}
-            className="w-80 h-10 px-4 rounded-md border"/>
+            className="w-80 h-10 px-4 outline-none rounded-md border"/>
         </div>
       )}
 
       {filteredProducts.length > 0 && (
-        <div className="absolute top-24 left-1/2 transform -translate-x-1/2 justify-center w-[270px] md:w-[400px] bg-white shadow-lg max-h-60 overflow-y-auto rounded-md border z-50">
+        <div className="absolute top-24 left-1/2  transform -translate-x-1/2 justify-center w-[270px] md:w-[400px] bg-white shadow-lg max-h-60 overflow-y-auto rounded-md border z-50">
           <ul>
             {filteredProducts.map((product) => (
               <li
