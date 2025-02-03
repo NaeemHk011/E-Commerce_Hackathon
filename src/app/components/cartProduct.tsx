@@ -1,13 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import { Tproduct } from "../../../utils/componentType";
+import { SignInButton, useAuth} from "@clerk/nextjs";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const CartProducts = () => {
     const [products, setProducts] = useState<Tproduct[]>([]);
+    const { isSignedIn } = useAuth(); // Check user authentication
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -28,6 +31,8 @@ const CartProducts = () => {
         fetchProducts();
     }, []);
 
+    console.log(products)
+
     const increment = (i: number) => {
         const updatedProducts = [...products];
         updatedProducts[i].quantity++;
@@ -44,12 +49,29 @@ const CartProducts = () => {
         return products.reduce((acc, product) => acc + product.quantity * product.price, 0);
     };
 
-    const handleCheckout = () => {
-        localStorage.removeItem('cart');
-        setProducts([]);
+     const router = useRouter()
+    const handleCheckout =  () => {
+        // const response = await fetch("/api/checkout", {
+        //     method: "POST",
+        //     headers: {
+        //         'Content-Type': 'application/json', 
+        //     },
+        //     body: JSON.stringify({ products }), 
+        // });
+    
+        // const data = await response.json();
+        //       window.location.href = data.url
+        //       console.log(data);
+              router.push("/checkout")
     };
-
+    
     const isCartEmpty = products.length === 0;
+
+    const removeFromCart = (id: number) => {
+        const updatedCart = products.filter((item) => item.id !== id);
+        setProducts(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+      };
 
     return (
         <>
@@ -66,10 +88,14 @@ const CartProducts = () => {
                         <tr key={product.id}>
                             <td>
                                 <div className="flex gap-x-[21px] sm:items-center">
-                                    <Image src={product.imageUrl} alt="Failed to load" width={64} height={64} />
+                                    <Image src={product.imageUrl} alt={product.title} width={80} height={80} />
                                     <div className="space-y-2 max-sm:mt-[19px]">
                                         <h4 className="text-[16px] leading-[20px]">{product.title}</h4>
                                         <p>${product.price}</p>
+                                        <button onClick={() => removeFromCart(product.id)}
+                                          className="text-red-500 font-bold text-2xl">
+                                          <RiDeleteBin6Line />
+                                         </button>
                                     </div>
                                 </div>
                             </td>
@@ -87,25 +113,34 @@ const CartProducts = () => {
             <div className="pt-7 pb-[55px] sm:pb-[48px] w-fit ml-auto">
                 <div className="space-y-3">
                     <div className="flex gap-x-4 items-center w-fit ml-auto">
-                        <h4 className="text-[--primary]">Subtotal</h4>
-                        <h3 className="text-[--dark-primary]">${totalAmount()}</h3>
+                        <h4 className="">Subtotal</h4>
+                        <h3 className="">${totalAmount()}</h3>
                     </div>
-                    <p className="max-sm:whitespace-nowrap text-sm text-[--primary]">
+                    <p className="max-sm:whitespace-nowrap text-sm ">
                         Taxes and shipping are calculated at checkout
                     </p>
                 </div>
 
                 {!isCartEmpty && (
-                    <Link href="/">
-                        <button
-                            type="button"
-                            onClick={handleCheckout}
-                            className="bg-[--dark-primary] max-sm:w-full block w-fit ml-auto bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]"
-                        >
-                            Go to checkout
-                        </button>
-                    </Link>
+                    <>
+                        {!isSignedIn ? (
+                            <SignInButton mode="redirect">
+                                <button
+                                    className="bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]">
+                                    Sign in to Checkout
+                                </button>
+                            </SignInButton>
+                        ) : (
+                            <button
+                                onClick={()=>handleCheckout()}
+                                className="bg-green-600 hover:bg-green-800 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]">
+                                Proceed to Payment
+                            </button>
+                        )}
+                        </>
                 )}
+
+
             </div>
         </>
     );

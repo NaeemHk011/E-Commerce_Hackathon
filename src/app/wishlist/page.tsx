@@ -44,7 +44,7 @@ const WishlistComponent = () => {
                 className="text-red-500 font-bold"
               >
                 Remove
-              </button>
+               </button>
             </li>
           ))}
         </ul>

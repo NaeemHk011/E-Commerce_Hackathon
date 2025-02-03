@@ -15,6 +15,7 @@ import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
 import Search from './search';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 
 
@@ -73,7 +74,14 @@ const Navbar = (props:NavbarType) => {
                     </div>
                     <div className=''>
                     <div className='w-[150px] md:w-[324px] h-[54px] flex justify-center items-center list-none text-[#23A6F0] '>
-                        <li className='hidden md:flex w-[166px] h-[54px]  items-center hover:text-[#252B42]'><a href="" className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></a></li>
+                    <SignedOut>
+                    <SignInButton>
+                        <li className='hidden md:flex w-[166px] h-[54px] items-center hover:text-[#252B42]'><div className=' flex  items-center gap-[2px]'><MdOutlineAccountCircle /><button className='rounded-[37px] text-sm font-bold leading-6 tracking-[0.200]'> Login / Register</button></div></li>
+                        </SignInButton>
+                           </SignedOut>
+                           <SignedIn>
+                             <UserButton/>
+                           </SignedIn>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Search /></li>
                             <li className='w-[46px] h-[46px] flex items-center hover:text-[#252B42]'><Link href="/cart" className=''><button className='text-xs flex'><IoCartOutline className='text-2xl'/></button></Link></li>
                             <li className='flex w-[46px] h-[46px]  items-center hover:text-[#252B42]'><Link href="/wishlist" className=''><button className='text-xs flex'><CiHeart className='text-2xl'/></button></Link></li>

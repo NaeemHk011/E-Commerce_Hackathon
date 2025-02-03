@@ -41,7 +41,7 @@ const FilterProduct = () => {
         fetchProducts() 
     }, []);
  
-    console.log(filterproducts)
+    
 
     //filter products based on the category
     const handleFilter = (category: string) => {

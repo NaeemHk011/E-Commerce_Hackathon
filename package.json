@@ -10,6 +10,7 @@
     "import-data": "node scripts/importSanityData.mjs"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.7.5",
     "@next/font": "^14.2.15",
     "@reduxjs/toolkit": "^2.5.0",
     "@sanity/image-url": "^1.1.0",
@@ -23,6 +24,8 @@
     "react-redux": "^9.2.0",
     "react-toastify": "^11.0.3",
     "sanity": "^3.69.0",
+    "shipengine": "^1.0.7",
+    "stripe": "^17.6.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {

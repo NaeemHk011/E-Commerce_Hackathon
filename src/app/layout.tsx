@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Montserrat } from 'next/font/google';
-import {ToastContainer} from "react-toastify"
+import {ToastContainer} from "react-toastify";
+import {ClerkProvider} from "@clerk/nextjs"
+
 
 const montserrat = Montserrat({
   subsets: ['latin'], 
@@ -23,7 +25,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return ( 
+   <ClerkProvider>
     <html lang="en">
       <body className={montserrat.className}>
        
@@ -32,5 +35,6 @@ export default function RootLayout({
         
         </body>
     </html>
+    </ClerkProvider>
   );
 }
