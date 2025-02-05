@@ -51,17 +51,7 @@ const CartProducts = () => {
 
      const router = useRouter()
     const handleCheckout =  () => {
-        // const response = await fetch("/api/checkout", {
-        //     method: "POST",
-        //     headers: {
-        //         'Content-Type': 'application/json', 
-        //     },
-        //     body: JSON.stringify({ products }), 
-        // });
-    
-        // const data = await response.json();
-        //       window.location.href = data.url
-        //       console.log(data);
+        
               router.push("/checkout")
     };
     

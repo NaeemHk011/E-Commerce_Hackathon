@@ -1,80 +1,14 @@
-// "use client";
-
-// import { useState } from "react";
-
-// export default function CheckoutPage() {
-//     const [isLoading, setIsLoading] = useState(false);
-
-//     const handleCheckout = async () => {
-//         setIsLoading(true);
-
-//         try {
-//             const response = await fetch("/api/checkout", {
-//                 method: "POST",
-//                 headers: {
-//                     "Content-Type": "application/json",
-//                 },
-//                 body: JSON.stringify({
-//                     products: [
-//                         { title: "Product 1", price: 20, quantity: 1 },
-//                         { title: "Product 2", price: 30, quantity: 2 },
-//                     ],
-//                 }),
-//             });
-
-//             const { url } = await response.json();
-//             if (url) {
-//                 window.location.href = url; // Redirect to Stripe checkout
-//             } else {
-//                 throw new Error("Failed to create checkout session");
-//             }
-//         } catch (error) {
-//             console.error("Checkout error:", error);
-//             alert("Something went wrong during checkout. Please try again.");
-//         } finally {
-//             setIsLoading(false);
-//         }
-//     };
-
-//     return (
-//         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-//             <h1 className="text-2xl font-bold mb-4">Checkout</h1>
-//             <button
-//                 onClick={handleCheckout}
-//                 disabled={isLoading}
-//                 className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 disabled:bg-gray-400"
-//             >
-//                 {isLoading ? "Processing..." : "Proceed to Payment"}
-//             </button>
-//         </div>
-//     );
-// }
-
 "use client";
 
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCity, FaGlobe } from "react-icons/fa";
 import { Tproduct } from "../../../utils/componentType";
-import { useAuth } from "@clerk/nextjs";
 
-
-export type TproductType= {
-  [x: string]: any;
-  title: string;
-  description: string;
-  discountedprice: number;
-  price: number;
-  imageUrl: string;
-  id:string;
-  
-}
 
 const Checkout = () => {
 
   const [cartProducts, setCartProducts] = useState<Tproduct[]>([]);
-
-
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -114,8 +48,7 @@ const Checkout = () => {
       orderDate: new Date().toISOString(), 
     };
     
-    
-
+  
     try {
       await client.create(orderData)
       localStorage.removeItem("cart")
@@ -124,10 +57,8 @@ const Checkout = () => {
       
     }
 
-
   }
    
-  console.log("Cart Products:", cartProducts);
 
   //for data from local storage
   useEffect(() => {
@@ -149,7 +80,7 @@ const Checkout = () => {
           fetchProducts();
       }, []);
 
-      console.log("Cart Products:", cartProducts);
+
       cartProducts.forEach(product => console.log("Product ID:", product._id));
       
   
@@ -169,7 +100,7 @@ const handleCheckout = async (cartProducts:any) => {
 
   const data = await response.json();
         window.location.href = data.url
-        console.log(data);
+        
         
 };
  

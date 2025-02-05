@@ -7,7 +7,7 @@ const Loading = () => {
         
         <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-black"></div>
         
-        <h1 className="text-2xl text-black font-bold">Loading...</h1>
+        <h1 className="text-2xl text-black font-bold">Loading....</h1>
       </div>
     </div>
   );
