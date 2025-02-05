@@ -1,11 +1,11 @@
 import { shipEngine } from "@/helper/shipEngine";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(){
     return new Response(JSON.stringify({message:"shipEngine testing"}))
 }
 
-export async function POST(request:NextResponse){
+export async function POST(request:NextRequest){
     const {shipToAddress, packages} = await request.json();
     try {
         const shipmentDetails = await shipEngine.getRatesWithShipmentDetails({
