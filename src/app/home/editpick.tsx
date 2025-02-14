@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 const Editpick = () => {
   return (
     <div>
-      <div className={`w-full h-auto px-6 md:px-[195px] flex flex-col bg-[#FAFAFA] ${montserrat.className}`}>
+      <div className={`w-full h-auto px-6 md:px-[195px] mt-20 flex flex-col bg-[#FAFAFA] ${montserrat.className}`}>
         <div className="w-full py-10 md:py-28 gap-6 md:gap-12 flex flex-col">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-center text-lg md:text-xl font-bold mb-2 text-[#252B42]">EDITOR&apos;S PICK</h2>
@@ -30,7 +30,7 @@ const Editpick = () => {
           {/* Images Container */}
           <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[30px] text-[#252B42]">
             {/* Image 1 */}
-            <Link href={`productList/4`}><div className="relative w-full md:w-[400px] h-[400px] md:h-[510px]">
+            <Link href={`productList/4`}><div className="relative w-full md:w-[350px] h-[400px] md:h-[510px]">
               <Image src={editpack1} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
               <div className="absolute left-4 bottom-4 md:bottom-8">
                 <Button
@@ -42,7 +42,7 @@ const Editpick = () => {
             </Link>
 
             {/* Image 2 */}
-            <Link href={`productList/17`}><div className="relative w-full md:w-[270px] h-[400px] md:h-[510px]">
+            <Link href={`productList/17`}><div className="relative w-full md:w-[250px] h-[400px] md:h-[510px]">
               <Image src={editpack2} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
               <div className="absolute left-4 bottom-4 md:bottom-8">
                 <Button
@@ -56,7 +56,7 @@ const Editpick = () => {
             <div className="w-full md:w-[240px] flex flex-col gap-6">
               {/* Image 3 */}
               <Link href={`productList/18`}><div className="relative w-full h-[242px] md:h-[242px] ">
-                <Image src={editpack3} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
+                <Image src={editpack3} alt="image" className="w-full h-full object-fill hover:scale-95 duration-500" />
                 <div className="absolute left-4 bottom-4">
                   <Button
                     title="ACCESSORIES"
@@ -67,7 +67,7 @@ const Editpick = () => {
 
               {/* Image 4 */}
               <Link href={`productList/11`}><div className="relative w-full h-[242px] md:h-[242px]">
-                <Image src={editpack4} alt="image" className="w-full h-full object-cover hover:scale-95 duration-500" />
+                <Image src={editpack4} alt="image" className="w-full h-full object-fill hover:scale-95 duration-500" />
                 <div className="absolute left-4 bottom-4">
                   <Button
                     title="KIDS"
